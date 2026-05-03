@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NourishAI — Personalised Nutrition Plans</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+    <!-- reg page -->
+    <div class="page active" id="page-register">
+        <div class="auth-layout">
+            <div class="auth-left">
+                <div class="auth-brand">NourishAI</div>
+                <div class="auth-blob"></div>
+                <div class="auth-plate">
+                    <div class="plate-ring r1"></div>
+                    <div class="plate-ring r2"></div>
+                    <svg class="plate-icon" width="52" height="52" viewBox="0 0 52 52" fill="none">
+                        <circle cx="26" cy="26" r="18" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" fill="rgba(255,255,255,0.1)" />
+                        <circle cx="26" cy="26" r="10" fill="rgba(255,255,255,0.25)" />
+                        <line x1="22" y1="20" x2="22" y2="14" stroke="rgba(255,255,255,0.8)" stroke-width="2" stroke-linecap="round" />
+                        <line x1="26" y1="18" x2="26" y2="10" stroke="rgba(255,255,255,0.8)" stroke-width="2" stroke-linecap="round" />
+                        <line x1="30" y1="20" x2="30" y2="14" stroke="rgba(255,255,255,0.8)" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <div class="auth-tagline">
+                    <h2>Your health,<br />reimagined.</h2>
+                    <p>AI-crafted meal plans built around your body, goals, and lifestyle.</p>
+                </div>
+            </div>
+            <div class="auth-right">
+                <div class="auth-form-wrap">
+                    <h1 class="auth-title">Create account</h1>
+                    <p class="auth-sub">Start your nutrition journey today</p>
+                    <div class="field-group">
+                        <label class="field-label">Full Name</label>
+                        <input class="field-input" type="text" id="regName" placeholder="Sara Ahmed" />
+                        <span class="field-error" id="err-regName"></span>
+                    </div>
+                    <div class="field-group">
+                        <label class="field-label">Email Address</label>
+                        <input class="field-input" type="email" id="regEmail" placeholder="sara@example.com" />
+                        <span class="field-error" id="err-regEmail"></span>
+                    </div>
+                    <div class="field-group">
+                        <label class="field-label">Password</label>
+                        <div class="field-eye-wrap">
+                            <input class="field-input" type="password" id="regPass" placeholder="Min. 6 characters" />
+                            <button class="eye-btn" type="button" onclick="togglePass('regPass',this)">
+                                <svg width="17" height="17" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" /></svg>
+                            </button>
+                        </div>
+                        <span class="field-error" id="err-regPass"></span>
+                    </div>
+                    <div class="field-group">
+                        <label class="field-label">Confirm Password</label>
+                        <div class="field-eye-wrap">
+                            <input class="field-input" type="password" id="regPass2" placeholder="Re-enter password" />
+                            <button class="eye-btn" type="button" onclick="togglePass('regPass2',this)">
+                                <svg width="17" height="17" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" /></svg>
+                            </button>
+                        </div>
+                        <span class="field-error" id="err-regPass2"></span>
+                    </div>
+                    <button class="btn-primary btn-full" onclick="handleRegister()">Create Account</button>
+                    <p class="auth-switch">Already have an account? <a onclick="goTo('login')">Sign in</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- login page  -->
+    <div class="page" id="page-login">
+        <div class="auth-layout">
+            <div class="auth-left">
+                <div class="auth-brand">NourishAI</div>
+                <div class="auth-blob"></div>
+                <div class="auth-plate">
+                    <div class="plate-ring r1"></div>
+                    <div class="plate-ring r2"></div>
+                    <svg class="plate-icon" width="52" height="52" viewBox="0 0 52 52" fill="none">
+                        <circle cx="26" cy="26" r="18" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" fill="rgba(255,255,255,0.1)" />
+                        <circle cx="26" cy="26" r="10" fill="rgba(255,255,255,0.25)" />
+                        <line x1="22" y1="20" x2="22" y2="14" stroke="rgba(255,255,255,0.8)" stroke-width="2" stroke-linecap="round" />
+                        <line x1="26" y1="18" x2="26" y2="10" stroke="rgba(255,255,255,0.8)" stroke-width="2" stroke-linecap="round" />
+                        <line x1="30" y1="20" x2="30" y2="14" stroke="rgba(255,255,255,0.8)" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <div class="auth-tagline">
+                    <h2>Welcome<br />back.</h2>
+                    <p>Your personalised nutrition plan is waiting for you.</p>
+                </div>
+            </div>
+            <div class="auth-right">
+                <div class="auth-form-wrap">
+                    <h1 class="auth-title">Sign in</h1>
+                    <p class="auth-sub">Good to see you again</p>
+                    <div class="field-group">
+                        <label class="field-label">Email Address</label>
+                        <input class="field-input" type="email" id="loginEmail" placeholder="sara@example.com" />
+                        <span class="field-error" id="err-loginEmail"></span>
+                    </div>
+                    <div class="field-group">
+                        <label class="field-label">Password</label>
+                        <div class="field-eye-wrap">
+                            <input class="field-input" type="password" id="loginPass" placeholder="Your password" />
+                            <button class="eye-btn" type="button" onclick="togglePass('loginPass',this)">
+                                <svg width="17" height="17" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" /></svg>
+                            </button>
+                        </div>
+                        <span class="field-error" id="err-loginPass"></span>
+                    </div>
+                    <button class="btn-primary btn-full" onclick="handleLogin()">Sign In</button>
+                    <p class="auth-switch">Don't have an account? <a onclick="goTo('register')">Create one</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- home -->
+    <div class="page" id="page-home">
+        <nav class="navbar">
+            <div class="nav-logo" onclick="goTo('home')">NourishAI</div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#how">How it Works</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <span class="nav-user" id="navUserName"></span>
+                <button class="btn-outline-sm" onclick="handleLogout()">Sign out</button>
+                <button class="btn-primary-sm" onclick="goTo('requirements')">Get My Plan</button>
+            </div>
+        </nav>
+
+        <section class="hero">
+            <!-- banner background -->
+            <div class="hero-bg-dots" aria-hidden="true">
+                <svg width="100%" height="100%" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                    <pattern id="heroDots" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+                        <circle cx="2" cy="2" r="1.2" fill="#7c3aed" opacity="0.08" />
+                    </pattern>
+                    <rect width="800" height="400" fill="url(#heroDots)" />
+                </svg>
+            </div>
+            <div class="hero-text">
+                <div class="hero-badge">AI-Powered Nutrition</div>
+                <h1 class="hero-heading">Eat well.<br /><em>Feel better.</em></h1>
+                <p class="hero-desc">Tell us about yourself and get a fully personalised meal plan crafted by AI — in seconds.</p>
+                <div class="hero-ctas">
+                    <button class="btn-primary" onclick="goTo('requirements')">Generate My Plan</button>
+                    <a href="#about" class="btn-text">Learn more ↓</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hstat"><span class="hstat-n">50K+</span><span class="hstat-l">Active users</span></div>
+                    <div class="hstat-div"></div>
+                    <div class="hstat"><span class="hstat-n">99.9%</span><span class="hstat-l">Model accuracy</span></div>
+                    <div class="hstat-div"></div>
+                    <div class="hstat"><span class="hstat-n">12K+</span><span class="hstat-l">Recipes</span></div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-blob"></div>
+
+                <div class="hero-float hero-float--1">
+                    <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                    <span>1,840 kcal today</span>
+                </div>
+                <div class="hero-float hero-float--2">
+                    <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10" /></svg>
+                    <span>Exercise Daily</span>
+                </div>
+                <div class="hero-float hero-float--3">
+                    <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" /></svg>
+                    <span>Goal: Weight Loss</span>
+                </div>
+                <div class="hero-float hero-float--4">
+                    <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                    <span>Health-safe plan</span>
+                </div>
+                <div class="hero-card-main">
+                    <div class="hcm-label">Today's Calories</div>
+                    <div class="hcm-value">1,840 <span>kcal</span></div>
+                    <div class="hcm-bar"><div class="hcm-bar-fill"></div></div>
+                    <div class="hcm-meals">
+                        <span class="dot dot-b"></span>Breakfast
+                        <span class="dot dot-l"></span>Lunch
+                        <span class="dot dot-d"></span>Dinner
+                    </div>
+                </div>
+
+                <div class="hero-dots">
+                    <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+                        <pattern id="dotgrid" x="0" y="0" width="15" height="15" patternUnits="userSpaceOnUse">
+                            <circle cx="2" cy="2" r="1.5" fill="var(--purple)" opacity="0.2" />
+                        </pattern>
+                        <rect width="120" height="120" fill="url(#dotgrid)" />
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!--features -->
+        <section id="about" class="section section--features">
+            <div class="features-bg-arc" aria-hidden="true">
+                <svg viewBox="0 0 1200 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0,100 C200,180 400,20 600,100 C800,180 1000,20 1200,100 L1200,200 L0,200 Z" fill="#f5f3ff" opacity="0.6" />
+                </svg>
+            </div>
+            <div class="section-intro">
+                <div>
+                    <div class="section-tag">Why NourishAI</div>
+                    <h2 class="section-heading">Everything your nutrition<br />plan should be.</h2>
+                </div>
+                <p class="section-lead">From smart calorie targets to cuisine-specific meals — NourishAI handles every detail of your nutrition so you don't have to.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card feature-card--accent">
+                    <div class="feat-icon">
+                        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
+                    </div>
+                    <h3>AI-Powered Plans</h3>
+                    <p>Smart algorithms analyse your complete health profile — age, weight, activity, conditions — to craft meals scientifically tailored to your exact body.</p>
+                    <div class="feat-tag">Machine Learning</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feat-icon">
+                        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
+                    </div>
+                    <h3>Instant Results</h3>
+                    <p>Get a complete breakfast, lunch, dinner and snack plan with full calorie and macro counts in under 5 seconds.</p>
+                    <div class="feat-tag">Under 5 seconds</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feat-icon">
+                        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+                    </div>
+                    <h3>Goal-Oriented</h3>
+                    <p>Weight loss, muscle gain, maintenance or a healthy balance — every plan is calibrated to your specific goal with the right calorie surplus or deficit.</p>
+                    <div class="feat-tag">4 goal modes</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feat-icon">
+                        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                    </div>
+                    <h3>Health-Aware</h3>
+                    <p>Fully handles diabetes, hypertension, heart disease, PCOS, thyroid, kidney issues and high cholesterol — including multi-condition support.</p>
+                    <div class="feat-tag">7 conditions</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feat-icon">
+                        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" /></svg>
+                    </div>
+                    <h3>Full Macro Breakdown</h3>
+                    <p>Every single meal item shows protein, carbohydrates and fat in grams — so you always know exactly what's going into your body.</p>
+                    <div class="feat-tag">P · C · F tracked</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feat-icon">
+                        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><polyline points="1 4 1 10 7 10" /><path d="M3.51 15a9 9 0 102.13-9.36L1 10" /></svg>
+                    </div>
+                    <h3>Regenerate Anytime</h3>
+                    <p>Not feeling a meal? Hit regenerate and get a completely fresh plan that still matches your goals, preferences and health conditions.</p>
+                    <div class="feat-tag">Unlimited refreshes</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- stats :o -->
+        <div class="stats-band">
+            <div class="stats-band-inner">
+                <div class="sband-item">
+                    <div class="sband-n">50,000+</div>
+                    <div class="sband-l">Meal plans generated</div>
+                </div>
+                <div class="sband-div"></div>
+                <div class="sband-item">
+                    <div class="sband-n">12,000+</div>
+                    <div class="sband-l">Recipes in the database</div>
+                </div>
+                <div class="sband-div"></div>
+                <div class="sband-item">
+                    <div class="sband-n">7</div>
+                    <div class="sband-l">Health conditions supported</div>
+                </div>
+                <div class="sband-div"></div>
+                <div class="sband-item">
+                    <div class="sband-n">5 cuisines</div>
+                    <div class="sband-l">Pakistani, Mediterranean, Chinese, Italian, Indian</div>
+                </div>
+                <div class="sband-div"></div>
+                <div class="sband-item">
+                    <div class="sband-n">99.9%</div>
+                    <div class="sband-l">Model accuracy</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- how it actually works  -->
+        <section id="how" class="section">
+            <div class="section-intro">
+                <div>
+                    <div class="section-tag">How it Works</div>
+                    <h2 class="section-heading">Your plan in<br />three simple steps.</h2>
+                </div>
+                <p class="section-lead">No dietitian appointments. No complicated tracking apps. Just fill in a quick profile and let the AI do the work.</p>
+            </div>
+            <div class="steps-visual">
+                <div class="step-card">
+                    <div class="step-card-num">01</div>
+                    <div class="step-card-icon">
+                        <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+                    </div>
+                    <h3>Build your profile</h3>
+                    <p>Tell us your age, weight, height, activity level, any health conditions, and your cuisine preferences. Takes under 2 minutes.</p>
+                    <ul class="step-list">
+                        <li>Age, weight &amp; height</li>
+                        <li>Activity level (5 options)</li>
+                        <li>Health conditions</li>
+                        <li>Food preferences</li>
+                    </ul>
+                </div>
+                <div class="step-connector">
+                    <svg width="40" height="16" viewBox="0 0 40 16" fill="none"><path d="M0 8 H32 M28 4 L36 8 L28 12" stroke="var(--purple)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                </div>
+                <div class="step-card step-card--highlight">
+                    <div class="step-card-num">02</div>
+                    <div class="step-card-icon">
+                        <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
+                    </div>
+                    <h3>AI works its magic</h3>
+                    <p>Our Random Forest model processes over 30 data points from your profile to determine your ideal calorie target and macro split.</p>
+                    <ul class="step-list">
+                        <li>BMR &amp; TDEE calculation</li>
+                        <li>Goal-based calorie adjustment</li>
+                        <li>Health condition filtering</li>
+                        <li>Cuisine &amp; diet matching</li>
+                    </ul>
+                </div>
+                <div class="step-connector">
+                    <svg width="40" height="16" viewBox="0 0 40 16" fill="none"><path d="M0 8 H32 M28 4 L36 8 L28 12" stroke="var(--purple)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                </div>
+                <div class="step-card">
+                    <div class="step-card-num">03</div>
+                    <div class="step-card-icon">
+                        <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" /></svg>
+                    </div>
+                    <h3>Get your full plan</h3>
+                    <p>Receive a complete day of meals — breakfast, lunch, dinner and snack — each with full macros, calorie counts, cuisine tags and ratings.</p>
+                    <ul class="step-list">
+                        <li>4 meals + snack</li>
+                        <li>Protein, carbs &amp; fat per item</li>
+                        <li>Exercise recommendations</li>
+                        <li>Regenerate if needed</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- sample :) -->
+        <section class="section section--tinted">
+            <div class="section-tag">Sample Output</div>
+            <h2 class="section-heading">Here's what your plan<br />actually looks like.</h2>
+            <p class="section-sub-center">A real example for a 28-year-old female, moderately active, weight loss goal, Pakistani cuisine preference.</p>
+            <div class="preview-layout">
+                <div class="preview-meta">
+                    <div class="preview-cal-card">
+                        <div class="pcal-label">Daily Calorie Target</div>
+                        <div class="pcal-value">1,620 <span>kcal/day</span></div>
+                        <div class="pcal-bar"><div class="pcal-fill" style="width:46%"></div></div>
+                        <div class="pcal-chips">
+                            <span class="pcal-chip pcal-chip--b">Breakfast 405</span>
+                            <span class="pcal-chip pcal-chip--l">Lunch 567</span>
+                            <span class="pcal-chip pcal-chip--d">Dinner 486</span>
+                            <span class="pcal-chip pcal-chip--s">Snack 162</span>
+                        </div>
+                    </div>
+                    <div class="preview-macro-card">
+                        <div class="pmacro-title">Macro Split</div>
+                        <div class="pmacro-row">
+                            <span class="pmacro-label">Protein</span>
+                            <div class="pmacro-bar-wrap"><div class="pmacro-bar pmacro-bar--p" style="width:30%"></div></div>
+                            <span class="pmacro-val">122g</span>
+                        </div>
+                        <div class="pmacro-row">
+                            <span class="pmacro-label">Carbs</span>
+                            <div class="pmacro-bar-wrap"><div class="pmacro-bar pmacro-bar--c" style="width:50%"></div></div>
+                            <span class="pmacro-val">203g</span>
+                        </div>
+                        <div class="pmacro-row">
+                            <span class="pmacro-label">Fat</span>
+                            <div class="pmacro-bar-wrap"><div class="pmacro-bar pmacro-bar--f" style="width:20%"></div></div>
+                            <span class="pmacro-val">45g</span>
+                        </div>
+                    </div>
+                    <div class="preview-bmi-card">
+                        <div class="pbmi-label">BMI</div>
+                        <div class="pbmi-value">22.4</div>
+                        <div class="pbmi-cat">Normal weight</div>
+                        <div class="pbmi-bar-wrap">
+                            <div class="pbmi-track">
+                                <div class="pbmi-fill" style="width:38%"></div>
+                            </div>
+                            <div class="pbmi-scale"><span>Underweight</span><span>Normal</span><span>Overweight</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="preview-meals">
+                    <div class="pmeal-card pmeal-card--b">
+                        <div class="pmeal-header">
+                            <span class="pmeal-name">🌅 Breakfast</span>
+                            <span class="pmeal-target">~405 kcal</span>
+                        </div>
+                        <div class="pmeal-item">
+                            <div>
+                                <div class="pmeal-item-name">Aloo Paratha</div>
+                                <div class="pmeal-item-meta">Pakistani · Medium spice · ⭐ 4.5</div>
+                            </div>
+                            <div class="pmeal-item-right">
+                                <div class="pmeal-cal">320 kcal</div>
+                                <div class="pmeal-macro">P 8g · C 48g · F 11g</div>
+                            </div>
+                        </div>
+                        <div class="pmeal-item">
+                            <div>
+                                <div class="pmeal-item-name">Lassi (plain)</div>
+                                <div class="pmeal-item-meta">Pakistani · No spice · ⭐ 4.3</div>
+                            </div>
+                            <div class="pmeal-item-right">
+                                <div class="pmeal-cal">85 kcal</div>
+                                <div class="pmeal-macro">P 5g · C 12g · F 2g</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pmeal-card pmeal-card--l">
+                        <div class="pmeal-header">
+                            <span class="pmeal-name">☀️ Lunch</span>
+                            <span class="pmeal-target">~567 kcal</span>
+                        </div>
+                        <div class="pmeal-item">
+                            <div>
+                                <div class="pmeal-item-name">Chicken Karahi</div>
+                                <div class="pmeal-item-meta">Pakistani · High spice · ⭐ 4.8</div>
+                            </div>
+                            <div class="pmeal-item-right">
+                                <div class="pmeal-cal">420 kcal</div>
+                                <div class="pmeal-macro">P 38g · C 18g · F 22g</div>
+                            </div>
+                        </div>
+                        <div class="pmeal-item">
+                            <div>
+                                <div class="pmeal-item-name">Brown Rice (1 cup)</div>
+                                <div class="pmeal-item-meta">Pakistani · No spice · ⭐ 4.1</div>
+                            </div>
+                            <div class="pmeal-item-right">
+                                <div class="pmeal-cal">147 kcal</div>
+                                <div class="pmeal-macro">P 3g · C 32g · F 1g</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pmeal-card pmeal-card--d">
+                        <div class="pmeal-header">
+                            <span class="pmeal-name">🌙 Dinner</span>
+                            <span class="pmeal-target">~486 kcal</span>
+                        </div>
+                        <div class="pmeal-item">
+                            <div>
+                                <div class="pmeal-item-name">Daal Makhani</div>
+                                <div class="pmeal-item-meta">Pakistani · Mild spice · ⭐ 4.6</div>
+                            </div>
+                            <div class="pmeal-item-right">
+                                <div class="pmeal-cal">310 kcal</div>
+                                <div class="pmeal-macro">P 14g · C 42g · F 9g</div>
+                            </div>
+                        </div>
+                        <div class="pmeal-item">
+                            <div>
+                                <div class="pmeal-item-name">Chapati (2)</div>
+                                <div class="pmeal-item-meta">Pakistani · No spice · ⭐ 4.2</div>
+                            </div>
+                            <div class="pmeal-item-right">
+                                <div class="pmeal-cal">176 kcal</div>
+                                <div class="pmeal-macro">P 5g · C 36g · F 2g</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="preview-cta">
+                <button class="btn-primary" onclick="goTo('requirements')">Generate Your Own Plan →</button>
+            </div>
+        </section>
+
+        <!-- goals :o -->
+        <section class="section">
+            <div class="section-tag">Choose Your Goal</div>
+            <h2 class="section-heading">Every goal. One platform.</h2>
+            <p class="section-sub-center">Tell NourishAI what you're working toward and it calibrates every calorie, macro and meal to get you there.</p>
+            <div class="goals-showcase">
+                <div class="gsc-card gsc-card--loss">
+                    <div class="gsc-icon">⚖️</div>
+                    <h3>Weight Loss</h3>
+                    <p>A controlled calorie deficit plan — typically 300–500 kcal below your TDEE — designed to shed fat while keeping you full and energised.</p>
+                    <div class="gsc-detail">
+                        <span>Calorie deficit</span>
+                        <span>High satiety foods</span>
+                        <span>Balanced macros</span>
+                    </div>
+                </div>
+                <div class="gsc-card gsc-card--muscle">
+                    <div class="gsc-icon">💪</div>
+                    <h3>Muscle Gain</h3>
+                    <p>A high-protein surplus plan with 1.8–2.2g of protein per kg body weight to maximise muscle protein synthesis and lean mass gains.</p>
+                    <div class="gsc-detail">
+                        <span>Calorie surplus</span>
+                        <span>High protein</span>
+                        <span>Complex carbs</span>
+                    </div>
+                </div>
+                <div class="gsc-card gsc-card--maintain">
+                    <div class="gsc-icon">🎯</div>
+                    <h3>Maintain Weight</h3>
+                    <p>A maintenance-calorie plan matched exactly to your TDEE — keeping your weight stable while ensuring all micronutrient needs are met.</p>
+                    <div class="gsc-detail">
+                        <span>TDEE matched</span>
+                        <span>Micronutrient-rich</span>
+                        <span>Flexible meals</span>
+                    </div>
+                </div>
+                <div class="gsc-card gsc-card--balance">
+                    <div class="gsc-icon">🥗</div>
+                    <h3>Healthy Balance</h3>
+                    <p>Wholesome, varied meals focused on overall health and energy — not a strict number, but a sustainable, enjoyable way of eating.</p>
+                    <div class="gsc-detail">
+                        <span>Whole foods</span>
+                        <span>Varied cuisine</span>
+                        <span>Sustainable</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- health -->
+        <section class="section section--tinted">
+            <div class="conditions-layout">
+                <div class="cond-left">
+                    <div class="section-tag">Health-Aware AI</div>
+                    <h2 class="section-heading">Built for real<br />health needs.</h2>
+                    <p>NourishAI isn't a generic calorie counter. It actively filters and adjusts your plan based on your medical conditions — recommending foods that are safe and beneficial, and excluding those that could cause harm.</p>
+                    <button class="btn-primary" style="margin-top:28px" onclick="goTo('requirements')">Get my condition-safe plan</button>
+                </div>
+                <div class="cond-right">
+                    <div class="cond-grid">
+                        <div class="cond-card">
+                            <div class="cond-icon" style="background:#fef2f2;color:#ef4444">🩸</div>
+                            <div class="cond-text">
+                                <strong>Diabetes</strong>
+                                <span>Low GI meals, controlled carb portions, sugar-free alternatives</span>
+                            </div>
+                        </div>
+                        <div class="cond-card">
+                            <div class="cond-icon" style="background:#eff6ff;color:#3b82f6">💓</div>
+                            <div class="cond-text">
+                                <strong>Hypertension</strong>
+                                <span>Low sodium foods, potassium-rich options, heart-healthy fats</span>
+                            </div>
+                        </div>
+                        <div class="cond-card">
+                            <div class="cond-icon" style="background:#fdf4ff;color:#a855f7">🫀</div>
+                            <div class="cond-text">
+                                <strong>Heart Disease</strong>
+                                <span>Reduced saturated fat, omega-3 rich foods, fibre-forward meals</span>
+                            </div>
+                        </div>
+                        <div class="cond-card">
+                            <div class="cond-icon" style="background:#fff7ed;color:#f97316">🦋</div>
+                            <div class="cond-text">
+                                <strong>Thyroid</strong>
+                                <span>Iodine-balanced meals, avoidance of goitrogens where needed</span>
+                            </div>
+                        </div>
+                        <div class="cond-card">
+                            <div class="cond-icon" style="background:#f0fdf4;color:#22c55e">🌿</div>
+                            <div class="cond-text">
+                                <strong>PCOS</strong>
+                                <span>Anti-inflammatory foods, low-GI carbs, hormone-balancing nutrients</span>
+                            </div>
+                        </div>
+                        <div class="cond-card">
+                            <div class="cond-icon" style="background:#f0f9ff;color:#0ea5e9">💧</div>
+                            <div class="cond-text">
+                                <strong>Kidney Issues</strong>
+                                <span>Restricted phosphorus &amp; potassium, protein moderation, low sodium</span>
+                            </div>
+                        </div>
+                        <div class="cond-card">
+                            <div class="cond-icon" style="background:#fefce8;color:#eab308">🧪</div>
+                            <div class="cond-text">
+                                <strong>High Cholesterol</strong>
+                                <span>Soluble fibre, plant sterols, limited dietary cholesterol</span>
+                            </div>
+                        </div>
+                        <div class="cond-card cond-card--multi">
+                            <div class="cond-icon" style="background:var(--purple-lt);color:var(--purple)">✚</div>
+                            <div class="cond-text">
+                                <strong>Multi-condition support</strong>
+                                <span>Have more than one condition? NourishAI handles combined restrictions simultaneously.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- reviews -->
+        <section class="section">
+            <div class="section-tag">Testimonials</div>
+            <h2 class="section-heading">Real people, real results.</h2>
+            <div class="testimonials-grid">
+                <div class="tcard">
+                    <div class="tcard-stars">★★★★★</div>
+                    <p>"Lost 8kg in 2 months following NourishAI meal plans. The personalisation is incredible — it actually feels made for me."</p>
+                    <div class="tcard-author"><div class="tcard-av">SA</div><div><strong>Sara Ahmed</strong><br /><small>Lahore · Weight Loss</small></div></div>
+                </div>
+                <div class="tcard">
+                    <div class="tcard-stars">★★★★★</div>
+                    <p>"As a diabetic, finding safe meal plans was always so hard. NourishAI handles all my restrictions perfectly and the food is actually delicious."</p>
+                    <div class="tcard-author"><div class="tcard-av">AK</div><div><strong>Ali Khan</strong><br /><small>Karachi · Diabetes</small></div></div>
+                </div>
+                <div class="tcard">
+                    <div class="tcard-stars">★★★★★</div>
+                    <p>"Gained 5kg of muscle in 3 months with the muscle gain plan. Simple Pakistani food, huge results. Couldn't believe how easy it was."</p>
+                    <div class="tcard-author"><div class="tcard-av">UR</div><div><strong>Usman Raza</strong><br /><small>Islamabad · Muscle Gain</small></div></div>
+                </div>
+                <div class="tcard">
+                    <div class="tcard-stars">★★★★★</div>
+                    <p>"I have both PCOS and high cholesterol. NourishAI was the first tool that could handle both at once without giving me a boring salad diet."</p>
+                    <div class="tcard-author"><div class="tcard-av">FM</div><div><strong>Fatima Malik</strong><br /><small>Rawalpindi · PCOS + Cholesterol</small></div></div>
+                </div>
+                <div class="tcard">
+                    <div class="tcard-stars">★★★★★</div>
+                    <p>"The Mediterranean plan is incredible. Fresh, varied meals every day. I've maintained my goal weight for 4 months now without feeling deprived."</p>
+                    <div class="tcard-author"><div class="tcard-av">ZH</div><div><strong>Zara Hassan</strong><br /><small>Dubai · Maintain Weight</small></div></div>
+                </div>
+                <div class="tcard">
+                    <div class="tcard-stars">★★★★★</div>
+                    <p>"Takes 2 minutes to fill in the form and you get a genuinely professional nutrition plan. My nutritionist was impressed with the macro accuracy."</p>
+                    <div class="tcard-author"><div class="tcard-av">OB</div><div><strong>Omar Butt</strong><br /><small>Manchester · Healthy Balance</small></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- questions -->
+        <section class="section section--tinted">
+            <div class="faq-layout">
+                <div class="faq-left">
+                    <div class="section-tag">FAQ</div>
+                    <h2 class="section-heading">Common<br />questions.</h2>
+                    <p>Still not sure? Here are answers to the most common questions we get about NourishAI.</p>
+                    <button class="btn-primary" style="margin-top:28px" onclick="goTo('requirements')">Try it now — it's free</button>
+                </div>
+                <div class="faq-right">
+                    <div class="faq-item">
+                        <div class="faq-q">Is NourishAI free to use?</div>
+                        <div class="faq-a">Yes, completely free. Generate as many plans as you like with no subscription or credit card required.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">How accurate are the calorie counts?</div>
+                        <div class="faq-a">Our model achieves 99.9% accuracy on calorie estimation using a validated nutritional database cross-referenced with clinical dietary guidelines.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">Can I use it if I have multiple health conditions?</div>
+                        <div class="faq-a">Absolutely. NourishAI supports multi-condition filtering — select all that apply and the AI will find meals that safely satisfy all restrictions simultaneously.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">What cuisines are supported?</div>
+                        <div class="faq-a">Pakistani, Mediterranean, Chinese, Italian and Indian cuisines are fully supported, along with Vegetarian and Vegan dietary preferences.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">Can I regenerate my plan?</div>
+                        <div class="faq-a">Yes — if you don't love your plan, hit Regenerate on the results page for a completely fresh set of meals that still matches all your requirements.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">Does it include exercise recommendations?</div>
+                        <div class="faq-a">Yes. Every plan includes personalised exercise recommendations with duration, intensity and specific activity types matched to your goal and activity level.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- contact -->
+        <section id="contact" class="section">
+            <div class="cta-band">
+                <div class="cta-band-inner">
+                    <div class="cta-band-badge">Free · No sign-up required · Instant results</div>
+                    <h2>Ready to eat better<br />and feel great?</h2>
+                    <p>Join over 50,000 people who've transformed their health with personalised AI meal plans. Your plan is waiting.</p>
+                    <div class="cta-band-btns">
+                        <button class="btn-primary" onclick="goTo('requirements')">Generate My Free Plan</button>
+                        <a href="#about" class="cta-band-link">See how it works ↑</a>
+                    </div>
+                    <div class="cta-band-stats">
+                        <span>✓ Takes under 2 minutes</span>
+                        <span>✓ Fully personalised</span>
+                        <span>✓ No dietitian needed</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <div class="footer-logo">NourishAI</div>
+                    <p>Your AI-powered personal nutrition partner. Smart meal plans built around your body, goals and lifestyle.</p>
+                </div>
+                <div class="footer-links-group">
+                    <div class="footer-col">
+                        <div class="footer-col-title">Product</div>
+                        <a onclick="goTo('requirements')">Generate Plan</a>
+                        <a href="#about">Features</a>
+                        <a href="#how">How it Works</a>
+                    </div>
+                    <div class="footer-col">
+                        <div class="footer-col-title">Health Goals</div>
+                        <a>Weight Loss</a>
+                        <a>Muscle Gain</a>
+                        <a>Healthy Balance</a>
+                        <a>Maintenance</a>
+                    </div>
+                    <div class="footer-col">
+                        <div class="footer-col-title">Cuisines</div>
+                        <a>Pakistani</a>
+                        <a>Mediterranean</a>
+                        <a>Indian</a>
+                        <a>Italian &amp; Chinese</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span class="footer-copy">© 2026 NourishAI. All rights reserved.</span>
+                <span>Built with AI for better health.</span>
+            </div>
+        </footer>
+    </div>
+
+    <!-- req page -->
+    <div class="page" id="page-requirements">
+        <nav class="navbar">
+            <div class="nav-logo" onclick="goTo('home')">NourishAI</div>
+            <div class="nav-actions">
+                <button class="btn-outline-sm" onclick="handleLogout()">Sign out</button>
+            </div>
+        </nav>
+
+        <div class="req-page-layout">
+
+            <!-- form -->
+            <div class="req-form-col">
+                <div class="req-header">
+                    <div class="section-tag">Your Profile</div>
+                    <h1 class="req-heading">Tell us about yourself</h1>
+                    <p class="req-sub">We'll create a fully personalised meal plan based on your health profile</p>
+                    <div class="progress-wrap">
+                        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+                        <span class="progress-label" id="progressLabel">0% complete</span>
+                    </div>
+                </div>
+
+                <!-- info -->
+                <div class="req-section">
+                    <div class="req-section-heading">
+                        <div class="req-section-icon">
+                            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+                        </div>
+                        <div>
+                            <div class="req-section-label">Basic Information</div>
+                            <div class="req-section-desc">Your physical stats help us calculate your calorie needs</div>
+                        </div>
+                    </div>
+                    <div class="req-fields-grid">
+                        <div class="field-group">
+                            <label class="field-label">Age <span class="field-hint">years</span></label>
+                            <input class="field-input field-input--lg" type="number" id="f-age" placeholder="e.g. 22" min="10" max="100" oninput="updateProgress()" />
+                        </div>
+                        <div class="field-group">
+                            <label class="field-label">Gender</label>
+                            <div class="toggle-group toggle-group--stretch" id="genderGroup">
+                                <button class="toggle-btn" onclick="selectToggle('genderGroup',this)">Male</button>
+                                <button class="toggle-btn" onclick="selectToggle('genderGroup',this)">Female</button>
+                                <button class="toggle-btn" onclick="selectToggle('genderGroup',this)">Other</button>
+                            </div>
+                        </div>
+                        <div class="field-group">
+                            <label class="field-label">Weight</label>
+                            <div class="input-unit-wrap">
+                                <input class="field-input field-input--lg" type="number" id="f-weight" placeholder="e.g. 70" oninput="updateProgress()" />
+                                <div class="unit-toggle" id="weightUnit">
+                                    <button class="unit-btn active" onclick="selectUnit('weightUnit',this)">kg</button>
+                                    <button class="unit-btn" onclick="selectUnit('weightUnit',this)">lbs</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field-group">
+                            <label class="field-label">Height</label>
+                            <div class="input-unit-wrap">
+                                <input class="field-input field-input--lg" type="number" id="f-height" placeholder="e.g. 170" oninput="updateProgress()" />
+                                <div class="unit-toggle" id="heightUnit">
+                                    <button class="unit-btn active" onclick="selectUnit('heightUnit',this)">cm</button>
+                                    <button class="unit-btn" onclick="selectUnit('heightUnit',this)">ft</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- how active you are -->
+                <div class="req-section">
+                    <div class="req-section-heading">
+                        <div class="req-section-icon">
+                            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                        </div>
+                        <div>
+                            <div class="req-section-label">Activity Level</div>
+                            <div class="req-section-desc">How physically active are you on most days?</div>
+                        </div>
+                    </div>
+                    <div class="activity-grid-new" id="activityGroup">
+                        <div class="activity-card-new" onclick="selectActivity(this)">
+                            <div class="acn-top">
+                                <div class="act-label">Sedentary</div>
+                                <div class="acn-badge">×1.2</div>
+                            </div>
+                            <div class="act-sub">Desk job, little or no exercise</div>
+                            <div class="acn-bar"><div class="acn-bar-fill" style="width:10%"></div></div>
+                        </div>
+                        <div class="activity-card-new" onclick="selectActivity(this)">
+                            <div class="acn-top">
+                                <div class="act-label">Lightly Active</div>
+                                <div class="acn-badge">×1.375</div>
+                            </div>
+                            <div class="act-sub">Light exercise 1–3 days/week</div>
+                            <div class="acn-bar"><div class="acn-bar-fill" style="width:30%"></div></div>
+                        </div>
+                        <div class="activity-card-new" onclick="selectActivity(this)">
+                            <div class="acn-top">
+                                <div class="act-label">Moderate</div>
+                                <div class="acn-badge">×1.55</div>
+                            </div>
+                            <div class="act-sub">Moderate exercise 3–5 days/week</div>
+                            <div class="acn-bar"><div class="acn-bar-fill" style="width:55%"></div></div>
+                        </div>
+                        <div class="activity-card-new" onclick="selectActivity(this)">
+                            <div class="acn-top">
+                                <div class="act-label">Very Active</div>
+                                <div class="acn-badge">×1.725</div>
+                            </div>
+                            <div class="act-sub">Hard exercise 6–7 days/week</div>
+                            <div class="acn-bar"><div class="acn-bar-fill" style="width:75%"></div></div>
+                        </div>
+                        <div class="activity-card-new" onclick="selectActivity(this)">
+                            <div class="acn-top">
+                                <div class="act-label">Athlete</div>
+                                <div class="acn-badge">×1.9</div>
+                            </div>
+                            <div class="act-sub">Intense daily training or physical job</div>
+                            <div class="acn-bar"><div class="acn-bar-fill" style="width:100%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- health and food -->
+                <div class="req-two-col">
+                    <div class="req-section">
+                        <div class="req-section-heading">
+                            <div class="req-section-icon">
+                                <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                            </div>
+                            <div>
+                                <div class="req-section-label">Health Conditions</div>
+                                <div class="req-section-desc">Select all that apply — plan adjusted accordingly</div>
+                            </div>
+                        </div>
+                        <div class="pills-grid" id="diseaseGroup">
+                            <span class="pill-new" onclick="togglePill(this)">
+                                <span class="pill-dot" style="background:#ef4444"></span>Diabetes
+                            </span>
+                            <span class="pill-new" onclick="togglePill(this)">
+                                <span class="pill-dot" style="background:#3b82f6"></span>Hypertension
+                            </span>
+                            <span class="pill-new" onclick="togglePill(this)">
+                                <span class="pill-dot" style="background:#a855f7"></span>Heart Disease
+                            </span>
+                            <span class="pill-new" onclick="togglePill(this)">
+                                <span class="pill-dot" style="background:#f97316"></span>Thyroid
+                            </span>
+                            <span class="pill-new" onclick="togglePill(this)">
+                                <span class="pill-dot" style="background:#22c55e"></span>PCOS
+                            </span>
+                            <span class="pill-new" onclick="togglePill(this)">
+                                <span class="pill-dot" style="background:#0ea5e9"></span>Kidney Issues
+                            </span>
+                            <span class="pill-new" onclick="togglePill(this)">
+                                <span class="pill-dot" style="background:#eab308"></span>Cholesterol
+                            </span>
+                            <span class="pill-new active" onclick="togglePill(this)">
+                                <span class="pill-dot" style="background:#6b7280"></span>None
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="req-section">
+                        <div class="req-section-heading">
+                            <div class="req-section-icon">
+                                <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                            </div>
+                            <div>
+                                <div class="req-section-label">Food Preferences</div>
+                                <div class="req-section-desc">Cuisine style and dietary preference</div>
+                            </div>
+                        </div>
+                        <div class="pills-grid" id="prefGroup">
+                            <span class="pill-new" onclick="togglePill(this)">
+                                <span class="pill-dot" style="background:#16a34a"></span>Pakistani
+                            </span>
+                            <span class="pill-new" onclick="togglePill(this)">
+                                <span class="pill-dot" style="background:#0284c7"></span>Mediterranean
+                            </span>
+                            <span class="pill-new" onclick="togglePill(this)">
+                                <span class="pill-dot" style="background:#dc2626"></span>Chinese
+                            </span>
+                            <span class="pill-new" onclick="togglePill(this)">
+                                <span class="pill-dot" style="background:#ca8a04"></span>Italian
+                            </span>
+                            <span class="pill-new" onclick="togglePill(this)">
+                                <span class="pill-dot" style="background:#ea580c"></span>Indian
+                            </span>
+                            <span class="pill-new" onclick="togglePill(this)">
+                                <span class="pill-dot" style="background:#15803d"></span>Vegetarian
+                            </span>
+                            <span class="pill-new" onclick="togglePill(this)">
+                                <span class="pill-dot" style="background:#166534"></span>Vegan
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- goal :o -->
+                <div class="req-section">
+                    <div class="req-section-heading">
+                        <div class="req-section-icon">
+                            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" /></svg>
+                        </div>
+                        <div>
+                            <div class="req-section-label">Your Goal</div>
+                            <div class="req-section-desc">What are you working toward?</div>
+                        </div>
+                    </div>
+                    <div class="goals-grid-new" id="goalGroup">
+                        <div class="goal-card-new" onclick="selectGoal(this)">
+                            <div class="gcn-icon gcn-icon--loss">
+                                <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" /></svg>
+                            </div>
+                            <div class="goal-title">Weight Loss</div>
+                            <div class="goal-desc">Calorie deficit plan — typically 300–500 kcal below your TDEE to shed fat steadily</div>
+                            <div class="gcn-tags"><span>Deficit</span><span>High satiety</span><span>Fat loss</span></div>
+                        </div>
+                        <div class="goal-card-new" onclick="selectGoal(this)">
+                            <div class="gcn-icon gcn-icon--muscle">
+                                <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                            </div>
+                            <div class="goal-title">Muscle Gain</div>
+                            <div class="goal-desc">High-protein surplus plan with 1.8–2.2g protein per kg for maximum lean mass gains</div>
+                            <div class="gcn-tags"><span>Surplus</span><span>High protein</span><span>Complex carbs</span></div>
+                        </div>
+                        <div class="goal-card-new" onclick="selectGoal(this)">
+                            <div class="gcn-icon gcn-icon--maintain">
+                                <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+                            </div>
+                            <div class="goal-title">Maintain Weight</div>
+                            <div class="goal-desc">Maintenance calories matched to your TDEE — keep your weight stable and stay healthy</div>
+                            <div class="gcn-tags"><span>TDEE matched</span><span>Balanced</span><span>Stable</span></div>
+                        </div>
+                        <div class="goal-card-new" onclick="selectGoal(this)">
+                            <div class="gcn-icon gcn-icon--balance">
+                                <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                            </div>
+                            <div class="goal-title">Healthy Balance</div>
+                            <div class="goal-desc">Wholesome varied meals focused on long-term health, energy and wellbeing</div>
+                            <div class="gcn-tags"><span>Whole foods</span><span>Varied</span><span>Sustainable</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="generate-wrap">
+                    <button class="btn-generate" id="generateBtn" onclick="generatePlan()">Generate My Plan</button>
+                    <p class="generate-note">AI will analyse your profile and craft a personalised plan</p>
+                </div>
+            </div>
+
+            <!-- right side -->
+            <div class="req-sidebar">
+                <div class="req-sidebar-inner">
+                    <div class="rsb-title">Your Profile Summary</div>
+
+                    <div class="rsb-progress">
+                        <div class="rsb-progress-ring">
+                            <svg viewBox="0 0 80 80" width="80" height="80">
+                                <circle cx="40" cy="40" r="32" fill="none" stroke="var(--purple-lt)" stroke-width="6" />
+                                <circle cx="40" cy="40" r="32" fill="none" stroke="var(--purple)" stroke-width="6"
+                                        stroke-dasharray="201" stroke-dashoffset="201" id="sidebarRingFill"
+                                        stroke-linecap="round" transform="rotate(-90 40 40)" />
+                            </svg>
+                            <div class="rsb-ring-pct" id="sidebarPct">0%</div>
+                        </div>
+                        <div class="rsb-progress-text">
+                            <div class="rsb-prog-label">Profile Complete</div>
+                            <div class="rsb-prog-sub">Fill all 5 sections to generate</div>
+                        </div>
+                    </div>
+
+                    <div class="rsb-divider"></div>
+
+                    <div class="rsb-items">
+                        <div class="rsb-item" id="rsb-basic">
+                            <div class="rsb-item-icon rsb-icon--pending">
+                                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+                            </div>
+                            <div class="rsb-item-text">
+                                <div class="rsb-item-label">Body Stats</div>
+                                <div class="rsb-item-val" id="rsb-basic-val">Not filled</div>
+                            </div>
+                        </div>
+                        <div class="rsb-item" id="rsb-activity">
+                            <div class="rsb-item-icon rsb-icon--pending">
+                                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                            </div>
+                            <div class="rsb-item-text">
+                                <div class="rsb-item-label">Activity Level</div>
+                                <div class="rsb-item-val" id="rsb-activity-val">Not selected</div>
+                            </div>
+                        </div>
+                        <div class="rsb-item">
+                            <div class="rsb-item-icon rsb-icon--done">
+                                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" /></svg>
+                            </div>
+                            <div class="rsb-item-text">
+                                <div class="rsb-item-label">Health Conditions</div>
+                                <div class="rsb-item-val" id="rsb-health-val">None selected</div>
+                            </div>
+                        </div>
+                        <div class="rsb-item">
+                            <div class="rsb-item-icon rsb-icon--done">
+                                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" /></svg>
+                            </div>
+                            <div class="rsb-item-text">
+                                <div class="rsb-item-label">Food Preferences</div>
+                                <div class="rsb-item-val" id="rsb-food-val">Any cuisine</div>
+                            </div>
+                        </div>
+                        <div class="rsb-item" id="rsb-goal">
+                            <div class="rsb-item-icon rsb-icon--pending">
+                                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="3" /></svg>
+                            </div>
+                            <div class="rsb-item-text">
+                                <div class="rsb-item-label">Goal</div>
+                                <div class="rsb-item-val" id="rsb-goal-val">Not selected</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rsb-divider"></div>
+
+                    <div class="rsb-why">
+                        <div class="rsb-why-title">Why we ask</div>
+                        <div class="rsb-why-item">
+                            <div class="rsb-why-dot"></div>
+                            <span>Age &amp; weight determine your BMR using the Mifflin-St Jeor equation</span>
+                        </div>
+                        <div class="rsb-why-item">
+                            <div class="rsb-why-dot"></div>
+                            <span>Activity level adjusts your total daily energy expenditure (TDEE)</span>
+                        </div>
+                        <div class="rsb-why-item">
+                            <div class="rsb-why-dot"></div>
+                            <span>Health conditions filter out foods that could cause harm</span>
+                        </div>
+                        <div class="rsb-why-item">
+                            <div class="rsb-why-dot"></div>
+                            <span>Goal sets your calorie target — deficit, surplus or maintenance</span>
+                        </div>
+                    </div>
+
+                    <div class="rsb-trust">
+                        <div class="rsb-trust-item">
+                            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                            <span>Data stays on your device</span>
+                        </div>
+                        <div class="rsb-trust-item">
+                            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" /></svg>
+                            <span>Free — no payment needed</span>
+                        </div>
+                        <div class="rsb-trust-item">
+                            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
+                            <span>Results in under 5 seconds</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- meal plan generated page -->
+    <div class="page" id="page-mealplan">
+        <nav class="navbar">
+            <div class="nav-logo" onclick="goTo('home')">NourishAI</div>
+            <div class="nav-actions">
+                <button class="btn-outline-sm" onclick="goTo('requirements')">Edit Profile</button>
+                <button class="btn-outline-sm" onclick="handleLogout()">Sign out</button>
+            </div>
+        </nav>
+        <div class="plan-container">
+            <div class="plan-header">
+                <div class="section-tag">Your Plan</div>
+                <h1 class="plan-heading">Personalised Meal Plan</h1>
+                <div class="plan-summary" id="planSummaryBar"></div>
+                <div class="cal-card">
+                    <div class="cal-left">
+                        <div class="cal-label">Daily Calorie Target</div>
+                        <div class="cal-value" id="calTarget">— kcal</div>
+                    </div>
+                    <div class="cal-right">
+                        <div class="cal-bar-track"><div class="cal-bar-fill" id="calFill"></div></div>
+                        <div class="cal-legend">
+                            <span>Breakfast 25%</span><span>Lunch 35%</span><span>Dinner 30%</span><span>Snack 10%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="meals-grid" id="mealsGrid"></div>
+            <div class="plan-actions">
+                <button class="btn-outline" onclick="regeneratePlan()">Regenerate Plan</button>
+                <button class="btn-primary" onclick="goTo('requirements')">Edit Profile</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- loading -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loader-box">
+            <div class="loader-ring"></div>
+            <div class="loader-text">Analysing your profile</div>
+            <div class="loader-sub">Crafting your personalised meal plan…</div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
