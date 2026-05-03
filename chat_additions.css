@@ -1,147 +1,148 @@
+# NourishAI
 
-/* ── Chat overlay ─────────────────────────────────────────── */
-.chat-overlay {
-    display: none;
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    z-index: 9999;
-}
-.chat-overlay.show { display: block; }
+A personalised meal planning web app powered by a Random Forest model and Grok AI. Users enter their profile — age, weight, height, activity level, dietary preference, health conditions, and goal — and get a tailored daily meal plan with calorie targets, macros, and exercise recommendations. An AI chat assistant lets users ask nutrition questions in context.
 
-.chat-panel {
-    width: 360px;
-    max-height: 520px;
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 8px 40px rgba(0,0,0,.18);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    font-family: inherit;
-}
+---
 
-.chat-header {
-    background: var(--purple, #7c5cbf);
-    color: #fff;
-    padding: 14px 18px;
-    font-weight: 600;
-    font-size: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.chat-close {
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 18px;
-    cursor: pointer;
-    line-height: 1;
-    padding: 0;
-}
+## Features
 
-.chat-messages {
-    flex: 1;
-    overflow-y: auto;
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
+- **Personalised meal plans** — Breakfast, Lunch, Dinner, and Snack recommendations based on your profile
+- **Dynamic calorie matching** — Recipes are filtered by proximity to your actual per-meal calorie targets (±50 kcal)
+- **Random Forest model** — Trained on user-recipe pairs to score recipe suitability per person
+- **Health condition support** — Filters recipes suitable for Diabetes, Hypertension, Heart Disease, Kidney Disease, and Acne
+- **Dietary preferences** — Omnivore, Vegetarian, Vegan, Pescatarian
+- **Cuisine preferences** — Pakistani, Indian, Afghan, Bangladeshi, Western, Fusion
+- **Exercise recommendations** — Personalised based on goal, activity level, BMI, and health conditions
+- **AI chat** — Grok-powered assistant that answers nutrition questions using your profile as context
+- **BMI calculator** — Auto-calculated from height and weight with category
 
-.chat-bubble {
-    max-width: 85%;
-    padding: 10px 14px;
-    border-radius: 14px;
-    font-size: 14px;
-    line-height: 1.55;
-    white-space: pre-wrap;
-}
-.chat-bubble--user {
-    align-self: flex-end;
-    background: var(--purple, #7c5cbf);
-    color: #fff;
-    border-bottom-right-radius: 4px;
-}
-.chat-bubble--ai {
-    align-self: flex-start;
-    background: #f3f0fa;
-    color: #333;
-    border-bottom-left-radius: 4px;
-}
+---
 
-/* Typing indicator */
-.chat-typing {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 12px 16px;
-}
-.chat-typing span {
-    width: 8px; height: 8px;
-    border-radius: 50%;
-    background: var(--purple, #7c5cbf);
-    opacity: .4;
-    animation: typingBounce 1.2s infinite ease-in-out;
-}
-.chat-typing span:nth-child(2) { animation-delay: .2s; }
-.chat-typing span:nth-child(3) { animation-delay: .4s; }
-@keyframes typingBounce {
-    0%, 80%, 100% { transform: translateY(0); opacity: .4; }
-    40%            { transform: translateY(-6px); opacity: 1; }
-}
+## Project Structure
 
-.chat-input-row {
-    display: flex;
-    padding: 12px;
-    border-top: 1px solid #eee;
-    gap: 8px;
-}
-.chat-input {
-    flex: 1;
-    border: 1px solid #ddd;
-    border-radius: 24px;
-    padding: 9px 16px;
-    font-size: 14px;
-    outline: none;
-    transition: border-color .2s;
-}
-.chat-input:focus { border-color: var(--purple, #7c5cbf); }
-.chat-send {
-    background: var(--purple, #7c5cbf);
-    color: #fff;
-    border: none;
-    border-radius: 24px;
-    padding: 9px 18px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: opacity .2s;
-}
-.chat-send:hover { opacity: .85; }
+```
+NourishAI_v2/
+├── app.py                        ← Flask backend
+├── processed_recipes_clean.csv   ← Cleaned recipe dataset (301 recipes)
+├── processed_users.csv           ← User training data for the RF model
+├── rf_model_v2.pkl               ← Trained model (auto-generated on first run)
+├── scaler_v2.pkl                 ← Scaler (auto-generated on first run)
+└── frontend/
+    ├── index.html
+    ├── style.css
+    └── app.js
+```
 
-/* Floating chat button (shown on meal plan page) */
-.chat-fab {
-    position: fixed;
-    bottom: 28px;
-    right: 28px;
-    z-index: 9000;
-    background: var(--purple, #7c5cbf);
-    color: #fff;
-    border: none;
-    border-radius: 50px;
-    padding: 14px 22px;
-    font-size: 15px;
-    font-weight: 600;
-    cursor: pointer;
-    box-shadow: 0 4px 20px rgba(124,92,191,.45);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: transform .2s, box-shadow .2s;
+---
+
+## Setup
+
+### 1. Install dependencies
+
+```bash
+pip install flask flask-cors scikit-learn pandas numpy
+```
+
+### 2. Set your Grok API key
+
+The `/chat` endpoint requires an xAI API key. Get one at https://console.x.ai
+
+**Windows:**
+```cmd
+set XAI_API_KEY=xai-...
+```
+
+**macOS/Linux:**
+```bash
+export XAI_API_KEY="xai-..."
+```
+
+The `/recommend` endpoint works without the API key. Only `/chat` requires it.
+
+### 3. Run the server
+
+```bash
+cd NourishAI_v2
+python app.py
+```
+
+First run will train the Random Forest model on the clean dataset (~30–60 seconds). Subsequent runs load the saved model instantly.
+
+Then open: **http://localhost:5000**
+
+---
+
+## API Endpoints
+
+### `POST /recommend`
+Returns a personalised meal plan.
+
+**Request body:**
+```json
+{
+  "age": 25,
+  "gender": "Female",
+  "weight_kg": 60,
+  "height_cm": 165,
+  "activity_level": "Moderate",
+  "dietary_preference": "Vegetarian",
+  "goal": "Weight Loss",
+  "health_conditions": ["Diabetes"],
+  "cuisine_preference": "Pakistani"
 }
-.chat-fab:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 28px rgba(124,92,191,.5);
+```
+
+**Response includes:** BMI, daily calorie target, meal breakdown, recipe suggestions per meal, exercise plan.
+
+---
+
+### `POST /chat`
+Grok-powered nutrition chat.
+
+**Request body:**
+```json
+{
+  "messages": [
+    { "role": "user", "content": "Why is fiber important?" }
+  ],
+  "user_context": {
+    "age": 25,
+    "gender": "Female",
+    "bmi": 22.0,
+    "bmi_category": "Normal",
+    "goal": "Weight Loss",
+    "activity_level": "Moderate",
+    "dietary_preference": "Vegetarian",
+    "health_conditions": ["Diabetes"],
+    "daily_calories": 1600,
+    "cuisine_preference": "Pakistani"
+  }
 }
+```
+
+Send the full `messages` array on every request — Grok has no memory between calls. `user_context` is optional but gives personalised responses.
+
+---
+
+### `GET /health`
+Returns server status, recipe count, model status, and whether the Grok API key is set.
+
+---
+
+## Dataset
+
+`processed_recipes_clean.csv` contains 301 recipes across Pakistani, Indian, Afghan, Bangladeshi, Western, and Fusion cuisines. Each recipe includes calories, macros (protein, carbs, fat, fiber, sugar), sodium, cholesterol, suitability flags for health conditions, dietary compatibility, and goal scores.
+
+Calorie range: 41 – 845 kcal per meal.
+
+---
+
+## Troubleshooting
+
+| Problem | Fix |
+|---|---|
+| `ModuleNotFoundError` | Run `pip install flask flask-cors scikit-learn pandas numpy` |
+| Chat returns API key warning | Run `set XAI_API_KEY=xai-...` before starting the server |
+| Port 5000 already in use | Change `port=5000` to `port=5001` at the bottom of `app.py` |
+| Model not found | Delete `rf_model_v2.pkl` and `scaler_v2.pkl` to retrain |
+| Wrong calorie suggestions | Make sure you're using the latest `app.py` with dynamic calorie matching |
