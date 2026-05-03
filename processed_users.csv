@@ -1,0 +1,201 @@
+age,gender,height_cm,weight_kg,activity_level,dietary_preference,daily_calorie_target,protein_g,sugar_g,sodium_mg,calories,carbohydrates_g,fiber_g,fat_g,goal,has_diabetes,has_hypertension,has_heart_disease,has_kidney_disease,has_acne,bmi,bmi_category,age_group,activity_encoded,breakfast_calories,lunch_calories,dinner_calories,snack_calories
+69,Male,190.0,69.0,Very Active,Omnivore,2952,110.4,26.5,2193.0,2952,421.1,22.3,91.8,Muscle Gain,0,0,1,0,0,19.11,Normal,60+,4,738,1033,886,295
+19,Female,177.0,65.0,Moderately Active,Omnivore,2625,104.0,38.1,1820.0,2625,368.4,20.3,81.7,Muscle Gain,0,0,0,0,0,20.75,Normal,18-29,3,656,919,788,262
+69,Female,174.0,47.0,Very Active,Vegetarian,2114,75.2,48.6,1951.0,2114,305.2,20.2,65.8,Muscle Gain,0,1,0,0,0,15.52,Underweight,60+,4,528,740,634,211
+25,Female,164.0,79.0,Extremely Active,Vegetarian,2405,94.8,38.0,1937.0,2405,338.1,24.7,74.8,Weight Loss,0,0,0,0,0,29.37,Overweight,18-29,5,601,842,722,240
+48,Female,165.0,59.0,Sedentary,Omnivore,964,70.8,34.7,1717.0,964,102.7,24.9,30.0,Weight Loss,0,0,0,0,0,21.67,Normal,45-59,1,241,337,289,96
+62,Male,162.0,79.0,Extremely Active,Omnivore,3145,126.4,45.4,2065.0,3145,439.8,20.1,97.8,Muscle Gain,0,0,1,0,0,30.1,Obese,60+,5,786,1101,944,314
+26,Male,169.0,66.0,Lightly Active,Omnivore,1688,79.2,43.2,2010.0,1688,224.7,24.9,52.5,Weight Loss,0,0,0,0,0,23.11,Normal,18-29,2,422,591,506,169
+31,Female,156.0,71.0,Moderately Active,Omnivore,2622,113.6,25.8,2009.0,2622,358.3,21.6,81.6,Weight Gain,0,0,0,0,0,29.17,Overweight,30-44,3,656,918,787,262
+46,Male,165.0,67.0,Sedentary,Omnivore,1272,80.4,45.2,2007.0,1272,148.5,33.9,39.6,Weight Loss,0,0,0,0,0,24.61,Normal,45-59,1,318,445,382,127
+45,Female,174.0,83.0,Extremely Active,Vegetarian,2410,99.6,33.8,1744.0,2410,334.1,20.0,75.0,Weight Loss,0,0,0,0,0,27.41,Overweight,45-59,5,602,844,723,241
+32,Female,176.0,76.0,Moderately Active,Omnivore,2685,121.6,49.1,1701.0,2685,361.8,34.6,83.5,Muscle Gain,0,0,0,1,0,24.54,Normal,30-44,3,671,940,806,268
+45,Female,171.0,67.0,Lightly Active,Omnivore,1860,80.4,37.2,2289.0,1860,254.3,22.2,57.9,Maintain,0,0,0,0,0,22.91,Normal,45-59,2,465,651,558,186
+22,Female,169.0,78.0,Moderately Active,Omnivore,2926,124.8,33.0,1649.0,2926,402.0,32.5,91.0,Weight Gain,0,0,0,1,0,27.31,Overweight,18-29,3,732,1024,878,293
+37,Male,168.0,95.0,Very Active,Pescatarian,3640,152.0,33.5,1591.0,3640,503.3,22.1,113.2,Weight Gain,0,0,0,0,0,33.66,Obese,30-44,4,910,1274,1092,364
+69,Male,189.0,103.0,Lightly Active,Pescatarian,2073,123.6,40.8,1771.0,2073,249.5,33.5,64.5,Weight Loss,0,0,0,0,0,28.83,Overweight,60+,2,518,726,622,207
+69,Female,160.0,52.0,Very Active,Vegetarian,2049,83.2,48.5,2279.0,2049,285.7,25.6,63.7,Muscle Gain,0,0,0,0,0,20.31,Normal,60+,4,512,717,615,205
+50,Female,153.0,77.0,Moderately Active,Omnivore,1539,92.4,43.0,1746.0,1539,184.6,31.2,47.9,Weight Loss,0,0,0,0,0,32.89,Obese,45-59,3,385,539,462,154
+62,Female,168.0,52.0,Moderately Active,Vegetarian,2003,83.2,37.3,1656.0,2003,277.4,28.7,62.3,Muscle Gain,0,0,1,0,0,18.42,Underweight,60+,3,501,701,601,200
+47,Female,163.0,50.0,Moderately Active,Pescatarian,1240,60.0,49.2,2271.0,1240,163.1,26.4,38.6,Weight Loss,0,0,0,0,0,18.82,Normal,45-59,3,310,434,372,124
+35,Female,174.0,86.0,Extremely Active,Vegetarian,3362,137.6,40.4,2292.0,3362,467.5,21.5,104.6,Muscle Gain,0,0,0,0,0,28.41,Overweight,30-44,5,840,1177,1009,336
+65,Male,168.0,83.0,Lightly Active,Omnivore,2645,132.8,27.0,1504.0,2645,343.3,29.2,82.3,Weight Gain,0,1,1,0,0,29.41,Overweight,60+,2,661,926,794,264
+40,Male,176.0,82.0,Moderately Active,Vegetarian,3174,131.2,28.9,2285.0,3174,440.2,24.9,98.7,Weight Gain,0,0,0,1,0,26.47,Overweight,30-44,3,794,1111,952,317
+54,Male,162.0,62.0,Very Active,Vegetarian,1859,74.4,26.3,1925.0,1859,260.3,21.3,57.8,Weight Loss,0,0,0,0,0,23.62,Normal,45-59,4,465,651,558,186
+36,Female,166.0,63.0,Moderately Active,Omnivore,1556,75.6,45.9,2057.0,1556,204.5,34.4,48.4,Weight Loss,0,0,0,0,0,22.86,Normal,30-44,3,389,545,467,156
+42,Female,157.0,89.0,Lightly Active,Vegan,2063,106.8,40.3,1836.0,2063,264.5,28.3,64.2,Maintain,0,0,0,1,0,36.11,Obese,30-44,2,516,722,619,206
+64,Male,178.0,84.0,Very Active,Vegetarian,3125,134.4,37.3,1879.0,3125,428.1,21.5,97.2,Muscle Gain,0,0,0,0,0,26.51,Overweight,60+,4,781,1094,938,312
+69,Female,159.0,63.0,Moderately Active,Vegetarian,1733,75.6,26.8,2014.0,1733,236.4,22.4,53.9,Maintain,1,0,0,0,0,24.92,Normal,60+,3,433,607,520,173
+50,Female,150.0,87.0,Extremely Active,Pescatarian,3153,139.2,29.9,1555.0,3153,428.3,33.6,98.1,Weight Gain,1,1,0,0,0,38.67,Obese,45-59,5,788,1104,946,315
+46,Female,175.0,54.0,Sedentary,Omnivore,1491,64.8,42.4,2003.0,1491,203.6,21.8,46.4,Maintain,0,0,0,0,0,17.63,Underweight,45-59,1,373,522,447,149
+41,Male,164.0,103.0,Very Active,Omnivore,2700,123.6,46.7,1949.0,2700,362.4,28.7,84.0,Weight Loss,0,0,0,0,0,38.3,Obese,30-44,4,675,945,810,270
+37,Male,177.0,79.0,Lightly Active,Omnivore,2360,94.8,47.6,1573.0,2360,330.0,20.2,73.4,Maintain,0,0,0,0,0,25.22,Overweight,30-44,2,590,826,708,236
+22,Male,164.0,66.0,Lightly Active,Vegan,2472,105.6,44.7,1573.0,2472,339.4,31.9,76.9,Muscle Gain,0,1,0,0,0,24.54,Normal,18-29,2,618,865,742,247
+28,Male,179.0,101.0,Sedentary,Vegetarian,2692,161.6,27.1,2061.0,2692,322.9,21.5,83.8,Muscle Gain,0,0,0,0,1,31.52,Obese,18-29,1,673,942,808,269
+25,Male,177.0,99.0,Moderately Active,Pescatarian,3063,118.8,43.8,1801.0,3063,432.5,34.8,95.3,Maintain,0,0,0,0,0,31.6,Obese,18-29,3,766,1072,919,306
+20,Male,174.0,67.0,Moderately Active,Vegan,2877,107.2,45.6,2095.0,2877,410.7,31.5,89.5,Muscle Gain,0,0,0,0,1,22.13,Normal,18-29,3,719,1007,863,288
+55,Male,182.0,60.0,Very Active,Vegetarian,2531,72.0,26.1,2240.0,2531,383.7,24.8,78.7,Maintain,0,0,0,0,0,18.11,Underweight,45-59,4,633,886,759,253
+31,Male,176.0,85.0,Extremely Active,Omnivore,3720,136.0,47.9,2267.0,3720,533.7,31.1,115.7,Muscle Gain,0,0,0,0,0,27.44,Overweight,30-44,5,930,1302,1116,372
+43,Female,157.0,72.0,Sedentary,Pescatarian,1590,86.4,38.4,1748.0,1590,199.7,30.5,49.5,Maintain,0,0,0,0,0,29.21,Overweight,30-44,1,398,556,477,159
+68,Female,154.0,69.0,Moderately Active,Pescatarian,1785,82.8,25.7,1801.0,1785,238.6,20.7,55.5,Maintain,0,0,0,0,0,29.09,Overweight,60+,3,446,625,536,178
+44,Female,166.0,57.0,Sedentary,Omnivore,972,68.4,26.9,2053.0,972,106.6,20.2,30.2,Weight Loss,0,0,0,0,0,20.69,Normal,30-44,1,243,340,292,97
+27,Female,168.0,61.0,Lightly Active,Omnivore,1376,73.2,30.2,2203.0,1376,174.5,24.1,42.8,Weight Loss,0,1,0,1,0,21.61,Normal,18-29,2,344,482,413,138
+20,Female,176.0,56.0,Very Active,Omnivore,2413,67.2,39.7,1884.0,2413,367.1,31.9,75.1,Maintain,0,0,0,0,0,18.08,Underweight,18-29,4,603,845,724,241
+51,Female,155.0,78.0,Moderately Active,Omnivore,2366,124.8,38.7,1861.0,2366,301.1,30.9,73.6,Muscle Gain,0,0,0,0,0,32.47,Obese,45-59,3,592,828,710,237
+34,Female,159.0,61.0,Lightly Active,Pescatarian,2250,97.6,33.2,2007.0,2250,307.4,27.4,70.0,Weight Gain,0,1,0,0,0,24.13,Normal,30-44,2,562,788,675,225
+33,Female,157.0,48.0,Lightly Active,Pescatarian,2061,76.8,41.7,1638.0,2061,294.2,27.1,64.1,Weight Gain,0,1,0,0,0,19.47,Normal,30-44,2,515,721,618,206
+23,Male,162.0,59.0,Moderately Active,Omnivore,1813,70.8,42.3,1531.0,1813,255.6,27.6,56.4,Weight Loss,0,0,0,0,0,22.48,Normal,18-29,3,453,635,544,181
+34,Male,187.0,90.0,Very Active,Omnivore,3584,144.0,34.3,1888.0,3584,501.1,23.1,111.5,Muscle Gain,0,0,0,0,1,25.74,Overweight,30-44,4,896,1254,1075,358
+68,Female,156.0,47.0,Very Active,Vegetarian,2128,75.2,36.2,1926.0,2128,307.9,21.6,66.2,Weight Gain,0,0,0,1,0,19.31,Normal,60+,4,532,745,638,213
+39,Male,187.0,98.0,Lightly Active,Vegetarian,3193,156.8,41.2,1884.0,3193,418.0,25.3,99.3,Weight Gain,0,0,0,0,0,28.02,Overweight,30-44,2,798,1118,958,319
+58,Female,154.0,50.0,Very Active,Omnivore,2045,80.0,33.3,2247.0,2045,288.1,27.5,63.6,Muscle Gain,1,1,0,0,0,21.08,Normal,45-59,4,511,716,614,204
+47,Female,173.0,53.0,Sedentary,Omnivore,1958,84.8,27.8,1818.0,1958,267.7,34.7,60.9,Weight Gain,0,0,0,0,0,17.71,Underweight,45-59,1,490,685,587,196
+19,Male,176.0,65.0,Moderately Active,Vegan,2073,78.0,33.1,1840.0,2073,295.1,22.8,64.5,Weight Loss,0,0,0,0,1,20.98,Normal,18-29,3,518,726,622,207
+28,Male,165.0,67.0,Moderately Active,Omnivore,1928,80.4,26.6,2292.0,1928,266.6,22.0,60.0,Weight Loss,0,0,0,0,0,24.61,Normal,18-29,3,482,675,578,193
+32,Male,185.0,92.0,Moderately Active,Pescatarian,3478,147.2,49.1,1599.0,3478,478.8,32.5,108.2,Weight Gain,0,0,0,0,0,26.88,Overweight,30-44,3,870,1217,1043,348
+46,Female,157.0,55.0,Very Active,Omnivore,1467,66.0,45.4,2032.0,1467,198.1,22.5,45.6,Weight Loss,0,0,0,0,0,22.31,Normal,45-59,4,367,513,440,147
+57,Male,175.0,86.0,Moderately Active,Vegan,3094,137.6,30.8,2220.0,3094,419.2,27.5,96.3,Weight Gain,0,0,0,0,0,28.08,Overweight,45-59,3,774,1083,928,309
+20,Female,156.0,52.0,Very Active,Pescatarian,1629,62.4,43.5,1959.0,1629,230.8,27.4,50.7,Weight Loss,0,0,0,0,1,21.37,Normal,18-29,4,407,570,489,163
+39,Female,151.0,54.0,Moderately Active,Omnivore,2048,86.4,34.5,1866.0,2048,282.3,28.0,63.7,Muscle Gain,0,0,0,0,0,23.68,Normal,30-44,3,512,717,614,205
+19,Male,188.0,85.0,Moderately Active,Vegan,3299,136.0,45.7,2267.0,3299,457.9,29.0,102.6,Muscle Gain,0,0,0,0,0,24.05,Normal,18-29,3,825,1155,990,330
+30,Female,157.0,62.0,Moderately Active,Pescatarian,1500,74.4,39.1,2057.0,1500,195.5,34.0,46.7,Weight Loss,0,0,0,0,0,25.15,Overweight,30-44,3,375,525,450,150
+68,Female,163.0,84.0,Very Active,Omnivore,2342,100.8,29.1,1649.0,2342,320.7,23.5,72.9,Maintain,0,0,0,0,0,31.62,Obese,60+,4,586,820,703,234
+26,Male,182.0,63.0,Lightly Active,Vegetarian,2558,100.8,35.4,2191.0,2558,359.6,21.7,79.6,Muscle Gain,0,0,0,0,0,19.02,Normal,18-29,2,640,895,767,256
+61,Male,188.0,78.0,Moderately Active,Omnivore,2065,93.6,44.5,1722.0,2065,278.2,24.7,64.2,Weight Loss,0,1,0,0,0,22.07,Normal,60+,3,516,723,620,206
+39,Female,177.0,84.0,Moderately Active,Omnivore,2765,134.4,30.2,2218.0,2765,363.4,31.2,86.0,Muscle Gain,0,0,0,0,0,26.81,Overweight,30-44,3,691,968,830,276
+18,Female,163.0,46.0,Moderately Active,Vegetarian,2403,73.6,27.6,1767.0,2403,358.9,31.5,74.8,Weight Gain,0,0,0,0,0,17.31,Underweight,18-29,3,601,841,721,240
+40,Male,184.0,82.0,Very Active,Omnivore,3062,98.4,31.3,1657.0,3062,452.7,28.3,95.3,Maintain,0,0,0,0,0,24.22,Normal,30-44,4,766,1072,919,306
+64,Female,157.0,78.0,Very Active,Vegetarian,2208,93.6,49.1,2256.0,2208,303.8,32.1,68.7,Maintain,0,0,0,0,0,31.64,Obese,60+,4,552,773,662,221
+40,Male,182.0,73.0,Sedentary,Vegetarian,2007,87.6,47.8,2000.0,2007,273.8,30.6,62.4,Maintain,0,0,0,1,0,22.04,Normal,30-44,1,502,702,602,201
+55,Male,191.0,63.0,Moderately Active,Pescatarian,1908,75.6,28.5,2195.0,1908,267.8,31.5,59.4,Weight Loss,0,0,0,0,1,17.27,Underweight,45-59,3,477,668,572,191
+26,Female,157.0,46.0,Moderately Active,Omnivore,1283,55.2,49.6,1921.0,1283,175.8,32.5,39.9,Weight Loss,0,0,1,0,1,18.66,Normal,18-29,3,321,449,385,128
+58,Female,155.0,78.0,Moderately Active,Vegan,2312,124.8,25.3,1610.0,2312,291.4,23.1,71.9,Muscle Gain,0,0,0,0,0,32.47,Obese,45-59,3,578,809,694,231
+27,Male,174.0,71.0,Moderately Active,Vegetarian,3085,113.6,29.2,2090.0,3085,441.6,20.7,96.0,Weight Gain,0,0,0,0,1,23.45,Normal,18-29,3,771,1080,926,308
+53,Female,166.0,83.0,Moderately Active,Omnivore,2234,99.6,28.4,1887.0,2234,302.5,34.3,69.5,Maintain,0,0,0,0,0,30.12,Obese,45-59,3,558,782,670,223
+62,Male,172.0,88.0,Moderately Active,Omnivore,3058,140.8,35.3,2064.0,3058,409.7,25.3,95.1,Weight Gain,0,0,1,0,1,29.75,Overweight,60+,3,764,1070,917,306
+47,Male,167.0,88.0,Sedentary,Vegan,2532,140.8,44.8,2052.0,2532,314.9,34.4,78.8,Weight Gain,0,1,0,0,0,31.55,Obese,45-59,1,633,886,760,253
+40,Male,166.0,70.0,Very Active,Vegetarian,2161,84.0,49.7,2255.0,2161,305.0,23.3,67.2,Weight Loss,1,0,0,0,0,25.4,Overweight,30-44,4,540,756,648,216
+24,Female,163.0,59.0,Very Active,Pescatarian,1790,70.8,48.6,1879.0,1790,251.4,34.6,55.7,Weight Loss,0,0,0,0,1,22.21,Normal,18-29,4,448,626,537,179
+41,Male,164.0,98.0,Sedentary,Vegetarian,1666,117.6,43.1,1552.0,1666,182.3,25.1,51.8,Weight Loss,0,0,0,0,0,36.44,Obese,30-44,1,416,583,500,167
+62,Female,159.0,88.0,Lightly Active,Pescatarian,1429,105.6,46.9,1923.0,1429,151.5,20.3,44.5,Weight Loss,0,0,0,0,0,34.81,Obese,60+,2,357,500,429,143
+61,Male,186.0,70.0,Very Active,Vegan,2695,84.0,35.5,2090.0,2695,401.2,26.3,83.8,Maintain,0,1,0,0,0,20.23,Normal,60+,4,674,943,808,270
+54,Female,174.0,45.0,Extremely Active,Omnivore,1602,54.0,28.1,2265.0,1602,234.4,25.9,49.8,Weight Loss,0,0,0,0,0,14.86,Underweight,45-59,5,400,561,481,160
+28,Female,162.0,78.0,Lightly Active,Omnivore,2051,93.6,41.2,1986.0,2051,275.6,34.1,63.8,Maintain,0,0,0,0,1,29.72,Overweight,18-29,2,513,718,615,205
+23,Male,166.0,59.0,Moderately Active,Vegetarian,1852,70.8,38.1,1708.0,1852,262.6,29.0,57.6,Weight Loss,0,0,0,0,0,21.41,Normal,18-29,3,463,648,556,185
+64,Male,186.0,63.0,Very Active,Vegetarian,2549,75.6,31.8,1881.0,2549,383.2,25.9,79.3,Maintain,1,0,1,0,0,18.21,Underweight,60+,4,637,892,765,255
+51,Male,185.0,69.0,Sedentary,Omnivore,2216,110.4,49.1,1588.0,2216,288.6,28.0,68.9,Muscle Gain,0,0,1,0,0,20.16,Normal,45-59,1,554,776,665,222
+20,Male,185.0,94.0,Very Active,Omnivore,3752,150.4,44.9,2027.0,3752,525.0,33.2,116.7,Muscle Gain,0,0,0,0,0,27.47,Overweight,18-29,4,938,1313,1126,375
+53,Female,176.0,82.0,Lightly Active,Pescatarian,2054,98.4,47.0,1504.0,2054,271.3,27.0,63.9,Maintain,0,1,0,1,0,26.47,Overweight,45-59,2,514,719,616,205
+46,Male,173.0,93.0,Lightly Active,Omnivore,1956,111.6,27.9,1801.0,1956,240.4,28.4,60.9,Weight Loss,1,0,0,0,1,31.07,Obese,45-59,2,489,685,587,196
+49,Male,163.0,82.0,Moderately Active,Omnivore,2478,98.4,42.2,1554.0,2478,347.6,34.1,77.1,Maintain,0,0,0,0,0,30.86,Obese,45-59,3,620,867,743,248
+35,Female,167.0,58.0,Extremely Active,Vegan,2447,69.6,44.0,1520.0,2447,370.9,22.0,76.1,Maintain,1,0,0,0,0,20.8,Normal,30-44,5,612,856,734,245
+51,Female,163.0,78.0,Extremely Active,Vegetarian,3127,124.8,44.9,2055.0,3127,438.0,22.5,97.3,Weight Gain,0,1,0,0,0,29.36,Overweight,45-59,5,782,1094,938,313
+61,Male,185.0,82.0,Very Active,Pescatarian,2892,98.4,44.0,1854.0,2892,422.1,34.5,90.0,Maintain,0,0,0,0,0,23.96,Normal,60+,4,723,1012,868,289
+42,Male,185.0,66.0,Moderately Active,Vegetarian,2997,105.6,30.1,1573.0,2997,433.9,22.4,93.2,Weight Gain,0,0,0,1,0,19.28,Normal,30-44,3,749,1049,899,300
+41,Female,177.0,47.0,Lightly Active,Omnivore,2164,75.2,40.2,1698.0,2164,314.4,29.0,67.3,Weight Gain,0,0,0,0,0,15.0,Underweight,30-44,2,541,757,649,216
+41,Female,157.0,55.0,Extremely Active,Vegetarian,1714,66.0,34.9,2280.0,1714,242.6,30.2,53.3,Weight Loss,0,0,0,0,0,22.31,Normal,30-44,5,428,600,514,171
+39,Male,180.0,78.0,Sedentary,Vegetarian,1558,93.6,37.1,1668.0,1558,186.8,20.3,48.5,Weight Loss,0,0,0,0,0,24.07,Normal,30-44,1,390,545,467,156
+30,Male,191.0,87.0,Very Active,Omnivore,3810,139.2,30.0,2055.0,3810,546.7,34.7,118.5,Weight Gain,0,1,0,0,0,23.85,Normal,30-44,4,952,1334,1143,381
+23,Male,170.0,60.0,Moderately Active,Omnivore,2706,96.0,48.7,2000.0,2706,391.0,34.0,84.2,Muscle Gain,0,0,0,0,0,20.76,Normal,18-29,3,676,947,812,271
+39,Female,175.0,47.0,Sedentary,Omnivore,949,56.4,39.8,2020.0,949,114.5,30.9,29.5,Weight Loss,0,0,0,0,0,15.35,Underweight,30-44,1,237,332,285,95
+49,Male,180.0,98.0,Moderately Active,Omnivore,3191,156.8,49.4,2020.0,3191,417.5,34.9,99.3,Muscle Gain,0,0,0,1,0,30.25,Obese,45-59,3,798,1117,957,319
+66,Female,170.0,75.0,Moderately Active,Vegetarian,2048,90.0,44.2,1904.0,2048,278.7,31.0,63.7,Maintain,0,0,0,1,0,25.95,Overweight,60+,3,512,717,614,205
+19,Female,164.0,78.0,Very Active,Pescatarian,2972,124.8,34.0,1807.0,2972,410.1,24.3,92.5,Muscle Gain,0,0,0,0,0,29.0,Overweight,18-29,4,743,1040,892,297
+40,Female,159.0,88.0,Moderately Active,Omnivore,2845,140.8,35.9,1578.0,2845,371.3,21.0,88.5,Weight Gain,0,0,0,0,0,34.81,Obese,30-44,3,711,996,854,284
+42,Male,186.0,82.0,Lightly Active,Omnivore,2744,131.2,28.3,2276.0,2744,362.6,31.6,85.4,Muscle Gain,0,0,0,0,0,23.7,Normal,30-44,2,686,960,823,274
+29,Female,158.0,45.0,Moderately Active,Pescatarian,2054,72.0,34.0,1803.0,2054,297.7,23.8,63.9,Muscle Gain,0,0,0,0,0,18.03,Underweight,18-29,3,514,719,616,205
+45,Female,164.0,59.0,Moderately Active,Omnivore,2405,94.4,28.1,1685.0,2405,338.6,34.8,74.8,Weight Gain,1,0,0,0,0,21.94,Normal,45-59,3,601,842,722,240
+66,Male,180.0,68.0,Very Active,Vegetarian,3053,108.8,25.4,1759.0,3053,440.7,30.3,95.0,Weight Gain,0,0,0,0,0,20.99,Normal,60+,4,763,1069,916,305
+37,Female,172.0,89.0,Sedentary,Vegan,1943,106.8,29.7,2085.0,1943,243.0,22.4,60.4,Maintain,0,0,0,0,0,30.08,Obese,30-44,1,486,680,583,194
+43,Male,172.0,64.0,Sedentary,Vegan,1306,76.8,44.2,1590.0,1306,158.3,33.0,40.6,Weight Loss,0,0,0,0,0,21.63,Normal,30-44,1,326,457,392,131
+22,Female,158.0,70.0,Lightly Active,Vegetarian,1448,84.0,46.7,2295.0,1448,176.8,24.8,45.0,Weight Loss,0,0,0,0,0,28.04,Overweight,18-29,2,362,507,434,145
+63,Female,153.0,82.0,Moderately Active,Pescatarian,2015,98.4,46.7,1801.0,2015,264.3,24.8,62.7,Maintain,0,0,0,0,0,35.03,Obese,60+,3,504,705,604,202
+38,Male,180.0,83.0,Moderately Active,Omnivore,2244,99.6,26.8,1983.0,2244,304.4,23.4,69.8,Weight Loss,0,0,0,0,0,25.62,Overweight,30-44,3,561,785,673,224
+19,Female,155.0,72.0,Sedentary,Omnivore,2219,115.2,39.5,1927.0,2219,284.3,26.0,69.0,Weight Gain,0,0,0,0,0,29.97,Overweight,18-29,1,555,777,666,222
+38,Male,184.0,97.0,Sedentary,Pescatarian,2622,155.2,48.2,1548.0,2622,316.7,23.7,81.6,Muscle Gain,0,0,0,0,0,28.65,Overweight,30-44,1,656,918,787,262
+63,Female,176.0,73.0,Very Active,Omnivore,2836,116.8,42.9,1718.0,2836,393.8,29.2,88.2,Weight Gain,0,1,0,0,0,23.57,Normal,60+,4,709,993,851,284
+48,Male,168.0,103.0,Moderately Active,Pescatarian,2360,123.6,45.1,1940.0,2360,301.2,27.3,73.4,Weight Loss,1,0,0,0,0,36.49,Obese,45-59,3,590,826,708,236
+45,Female,158.0,70.0,Lightly Active,Omnivore,2090,112.0,47.5,1783.0,2090,264.2,32.6,65.0,Muscle Gain,0,0,0,0,0,28.04,Overweight,45-59,2,522,732,627,209
+42,Female,167.0,63.0,Moderately Active,Vegetarian,2519,100.8,43.4,2190.0,2519,352.6,22.5,78.4,Weight Gain,0,0,1,0,0,22.59,Normal,30-44,3,630,882,756,252
+28,Female,159.0,53.0,Moderately Active,Vegetarian,2195,84.8,28.4,2056.0,2195,310.3,34.8,68.3,Muscle Gain,0,0,0,0,0,20.96,Normal,18-29,3,549,768,658,220
+63,Female,168.0,48.0,Very Active,Omnivore,2118,76.8,27.1,2215.0,2118,304.4,21.2,65.9,Muscle Gain,0,0,0,0,0,17.01,Underweight,60+,4,530,741,635,212
+19,Male,189.0,59.0,Sedentary,Omnivore,2318,94.4,42.0,1685.0,2318,322.9,28.9,72.1,Muscle Gain,0,0,0,0,0,16.52,Underweight,18-29,1,580,811,695,232
+51,Male,184.0,84.0,Lightly Active,Omnivore,2692,134.4,40.9,2104.0,2692,350.1,34.4,83.8,Muscle Gain,0,0,0,0,1,24.81,Normal,45-59,2,673,942,808,269
+29,Female,157.0,64.0,Moderately Active,Omnivore,2539,102.4,25.5,2090.0,2539,354.6,34.6,79.0,Weight Gain,0,0,0,0,1,25.96,Overweight,18-29,3,635,889,762,254
+56,Female,150.0,60.0,Moderately Active,Omnivore,1200,72.0,30.7,1773.0,1200,144.1,21.8,37.3,Weight Loss,0,0,0,0,0,26.67,Overweight,45-59,3,300,420,360,120
+40,Female,175.0,48.0,Very Active,Vegan,1592,57.6,39.2,1813.0,1592,229.0,28.6,49.5,Weight Loss,0,0,0,0,0,15.67,Underweight,30-44,4,398,557,478,159
+47,Female,163.0,50.0,Sedentary,Vegan,847,60.0,25.6,1623.0,847,92.3,24.8,26.4,Weight Loss,0,0,0,0,0,18.82,Normal,45-59,1,212,296,254,85
+50,Male,165.0,85.0,Moderately Active,Vegan,2836,136.0,37.6,1819.0,2836,374.5,22.6,88.2,Muscle Gain,0,0,0,1,0,31.22,Obese,45-59,3,709,993,851,284
+62,Female,177.0,56.0,Extremely Active,Omnivore,2771,89.6,36.0,1585.0,2771,409.2,27.6,86.2,Weight Gain,0,1,0,0,0,17.87,Underweight,60+,5,693,970,831,277
+22,Male,180.0,88.0,Moderately Active,Pescatarian,2445,105.6,42.4,2287.0,2445,334.4,20.9,76.1,Weight Loss,0,0,0,0,1,27.16,Overweight,18-29,3,611,856,734,244
+33,Female,177.0,77.0,Moderately Active,Vegan,2403,92.4,32.7,1999.0,2403,340.1,29.2,74.8,Maintain,0,0,0,0,0,24.58,Normal,30-44,3,601,841,721,240
+52,Male,168.0,81.0,Moderately Active,Vegan,2488,97.2,25.3,1833.0,2488,350.6,31.5,77.4,Maintain,0,1,0,0,0,28.7,Overweight,45-59,3,622,871,746,249
+22,Male,162.0,67.0,Sedentary,Pescatarian,1393,80.4,49.0,1890.0,1393,170.4,32.0,43.3,Weight Loss,0,0,0,0,1,25.53,Overweight,18-29,1,348,488,418,139
+21,Female,151.0,62.0,Moderately Active,Omnivore,2512,99.2,44.6,2214.0,2512,352.8,26.9,78.2,Weight Gain,0,0,0,0,0,27.19,Overweight,18-29,3,628,879,754,251
+50,Male,171.0,104.0,Sedentary,Vegetarian,2236,124.8,41.5,2216.0,2236,277.6,29.6,69.6,Maintain,0,0,0,0,0,35.57,Obese,45-59,1,559,783,671,224
+61,Female,150.0,67.0,Very Active,Omnivore,1469,80.4,26.8,1557.0,1469,184.0,30.7,45.7,Weight Loss,1,0,0,0,0,29.78,Overweight,60+,4,367,514,441,147
+69,Male,176.0,73.0,Very Active,Omnivore,2070,87.6,41.5,2111.0,2070,285.0,21.5,64.4,Weight Loss,0,1,1,0,0,23.57,Normal,60+,4,518,724,621,207
+57,Female,174.0,53.0,Moderately Active,Omnivore,1316,63.6,44.4,2015.0,1316,173.4,29.2,40.9,Weight Loss,0,1,0,0,0,17.51,Underweight,45-59,3,329,461,395,132
+19,Female,171.0,57.0,Moderately Active,Vegan,2443,91.2,28.2,1771.0,2443,348.5,29.8,76.0,Muscle Gain,0,0,0,0,0,19.49,Normal,18-29,3,611,855,733,244
+67,Male,183.0,84.0,Extremely Active,Vegetarian,3442,134.4,49.8,2037.0,3442,485.1,20.2,107.1,Muscle Gain,0,0,0,0,0,25.08,Overweight,60+,5,860,1205,1033,344
+38,Female,157.0,84.0,Moderately Active,Omnivore,1779,100.8,43.8,1715.0,1779,219.5,24.8,55.3,Weight Loss,0,0,0,0,0,34.08,Obese,30-44,3,445,623,534,178
+48,Female,164.0,67.0,Very Active,Vegetarian,2532,107.2,37.7,1738.0,2532,348.5,28.9,78.8,Muscle Gain,0,0,0,0,0,24.91,Normal,45-59,4,633,886,760,253
+25,Male,171.0,70.0,Very Active,Pescatarian,3144,112.0,29.8,2204.0,3144,454.0,24.2,97.8,Muscle Gain,0,0,0,0,0,23.94,Normal,18-29,4,786,1100,943,314
+58,Female,165.0,57.0,Moderately Active,Vegan,2283,91.2,45.8,1509.0,2283,319.8,32.6,71.0,Weight Gain,0,0,0,0,0,20.94,Normal,45-59,3,571,799,685,228
+36,Female,154.0,48.0,Moderately Active,Vegan,2007,76.8,28.4,2030.0,2007,284.5,23.3,62.4,Muscle Gain,1,0,1,0,0,20.24,Normal,30-44,3,502,702,602,201
+37,Male,178.0,61.0,Moderately Active,Omnivore,2691,97.6,39.0,1949.0,2691,386.8,28.7,83.7,Muscle Gain,0,0,0,0,0,19.25,Normal,30-44,3,673,942,807,269
+63,Male,180.0,76.0,Very Active,Pescatarian,3017,121.6,45.6,1916.0,3017,421.4,23.1,93.9,Muscle Gain,0,1,0,0,0,23.46,Normal,60+,4,754,1056,905,302
+45,Male,188.0,101.0,Extremely Active,Vegetarian,3734,121.2,40.9,2129.0,3734,550.8,26.3,116.2,Maintain,1,0,0,0,0,28.58,Overweight,45-59,5,934,1307,1120,373
+22,Female,174.0,54.0,Lightly Active,Omnivore,1365,64.8,31.8,1914.0,1365,180.8,32.5,42.5,Weight Loss,0,0,0,0,0,17.84,Underweight,18-29,2,341,478,410,136
+54,Male,181.0,103.0,Moderately Active,Vegan,2939,123.6,26.2,2223.0,2939,405.5,29.5,91.4,Maintain,0,0,1,1,0,31.44,Obese,45-59,3,735,1029,882,294
+48,Female,169.0,68.0,Moderately Active,Omnivore,1570,81.6,25.9,1721.0,1570,201.1,20.7,48.8,Weight Loss,0,0,0,0,0,23.81,Normal,45-59,3,392,550,471,157
+30,Male,167.0,98.0,Lightly Active,Omnivore,2583,117.6,39.0,1777.0,2583,347.2,29.3,80.4,Maintain,0,0,0,0,0,35.14,Obese,30-44,2,646,904,775,258
+37,Male,185.0,69.0,Very Active,Vegan,3374,110.4,40.6,1896.0,3374,496.9,31.8,105.0,Weight Gain,0,0,0,0,0,20.16,Normal,30-44,4,844,1181,1012,337
+42,Male,182.0,66.0,Lightly Active,Omnivore,1690,79.2,31.3,2180.0,1690,224.9,23.4,52.6,Weight Loss,0,0,0,0,0,19.93,Normal,30-44,2,422,592,507,169
+56,Male,183.0,103.0,Moderately Active,Vegetarian,2443,123.6,29.1,2257.0,2443,316.1,27.3,76.0,Weight Loss,0,0,0,0,0,30.76,Obese,45-59,3,611,855,733,244
+29,Female,173.0,84.0,Sedentary,Pescatarian,2438,134.4,37.4,1772.0,2438,304.6,31.9,75.8,Weight Gain,0,0,0,0,1,28.07,Overweight,18-29,1,610,853,731,244
+38,Female,164.0,66.0,Lightly Active,Pescatarian,1334,79.2,43.8,1946.0,1334,160.9,28.4,41.5,Weight Loss,0,0,0,0,0,24.54,Normal,30-44,2,334,467,400,133
+23,Male,168.0,77.0,Very Active,Vegan,3450,123.2,30.1,1919.0,3450,497.9,34.5,107.3,Weight Gain,0,0,0,0,0,27.28,Overweight,18-29,4,862,1208,1035,345
+32,Male,177.0,100.0,Moderately Active,Vegetarian,2524,120.0,32.9,2186.0,2524,334.4,31.9,78.5,Weight Loss,0,0,0,0,0,31.92,Obese,30-44,3,631,883,757,252
+25,Female,154.0,76.0,Very Active,Omnivore,1978,91.2,27.1,2206.0,1978,264.9,29.2,61.5,Weight Loss,0,0,0,0,0,32.05,Obese,18-29,4,494,692,593,198
+47,Male,174.0,88.0,Lightly Active,Omnivore,2389,105.6,25.3,1948.0,2389,324.5,22.4,74.3,Maintain,0,0,0,0,0,29.07,Overweight,45-59,2,597,836,717,239
+45,Male,190.0,63.0,Very Active,Vegan,3256,100.8,36.8,2157.0,3256,485.3,24.7,101.3,Weight Gain,0,0,0,0,0,17.45,Underweight,45-59,4,814,1140,977,326
+65,Female,170.0,72.0,Very Active,Omnivore,1736,86.4,33.7,1860.0,1736,226.1,22.1,54.0,Weight Loss,0,0,0,0,0,24.91,Normal,60+,4,434,608,521,174
+47,Male,176.0,81.0,Moderately Active,Vegetarian,2104,97.2,42.2,1556.0,2104,281.4,24.9,65.5,Weight Loss,0,0,0,0,0,26.15,Overweight,45-59,3,526,736,631,210
+20,Male,165.0,79.0,Lightly Active,Omnivore,2874,126.4,35.2,2107.0,2874,391.0,31.4,89.4,Weight Gain,0,0,0,1,0,29.02,Overweight,18-29,2,718,1006,862,287
+50,Male,167.0,81.0,Moderately Active,Omnivore,1994,97.2,46.6,1937.0,1994,261.8,26.9,62.0,Weight Loss,0,0,0,0,1,29.04,Overweight,45-59,3,498,698,598,199
+31,Female,175.0,82.0,Lightly Active,Omnivore,2197,98.4,43.8,2144.0,2197,297.0,33.7,68.4,Maintain,1,0,0,0,0,26.78,Overweight,30-44,2,549,769,659,220
+36,Female,164.0,58.0,Lightly Active,Omnivore,1238,69.6,26.2,1954.0,1238,153.3,23.9,38.5,Weight Loss,0,0,0,0,0,21.56,Normal,30-44,2,310,433,371,124
+21,Male,188.0,58.0,Very Active,Omnivore,2855,69.6,49.7,2001.0,2855,444.4,25.1,88.8,Maintain,0,0,0,0,1,16.41,Underweight,18-29,4,714,999,856,286
+67,Female,170.0,65.0,Sedentary,Vegetarian,1460,78.0,27.3,2228.0,1460,184.9,21.7,45.4,Maintain,0,0,0,0,0,22.49,Normal,60+,1,365,511,438,146
+57,Male,173.0,66.0,Moderately Active,Omnivore,1765,79.2,29.3,2258.0,1765,238.5,22.5,54.9,Weight Loss,0,0,0,0,0,22.05,Normal,45-59,3,441,618,530,176
+39,Female,161.0,89.0,Extremely Active,Omnivore,2426,106.8,49.6,1715.0,2426,329.8,27.1,75.5,Weight Loss,0,0,1,1,0,34.34,Obese,30-44,5,606,849,728,243
+25,Male,180.0,96.0,Extremely Active,Vegetarian,4234,153.6,40.3,1725.0,4234,608.6,22.9,131.7,Weight Gain,0,0,1,1,1,29.63,Overweight,18-29,5,1058,1482,1270,423
+37,Male,189.0,87.0,Lightly Active,Vegetarian,2573,104.4,32.3,2245.0,2573,358.9,27.7,80.0,Maintain,0,0,0,0,0,24.36,Normal,30-44,2,643,901,772,257
+58,Male,168.0,67.0,Very Active,Vegetarian,1975,80.4,29.1,1812.0,1975,275.2,33.9,61.4,Weight Loss,0,0,0,0,0,23.74,Normal,45-59,4,494,691,592,198
+62,Male,187.0,93.0,Extremely Active,Pescatarian,3708,148.8,42.9,2164.0,3708,518.5,20.0,115.4,Muscle Gain,1,0,0,0,0,26.59,Overweight,60+,5,927,1298,1112,371
+35,Female,154.0,63.0,Moderately Active,Pescatarian,2448,100.8,33.0,2100.0,2448,339.8,26.1,76.2,Weight Gain,0,0,0,0,0,26.56,Overweight,30-44,3,612,857,734,245
+35,Female,168.0,53.0,Moderately Active,Vegan,1928,63.6,47.6,1553.0,1928,283.4,21.8,60.0,Maintain,0,0,1,0,0,18.78,Normal,30-44,3,482,675,578,193
+62,Male,176.0,80.0,Extremely Active,Omnivore,3030,96.0,45.4,1554.0,3030,449.3,27.0,94.3,Maintain,0,0,0,0,0,25.83,Overweight,60+,5,758,1060,909,303
+47,Female,177.0,88.0,Very Active,Pescatarian,2743,105.6,35.8,1755.0,2743,388.2,33.7,85.3,Maintain,0,0,0,0,0,28.09,Overweight,45-59,4,686,960,823,274
+51,Male,185.0,82.0,Moderately Active,Pescatarian,2176,98.4,28.9,1520.0,2176,293.3,25.2,67.7,Weight Loss,0,0,0,0,0,23.96,Normal,45-59,3,544,762,653,218
+66,Male,167.0,59.0,Moderately Active,Vegetarian,2029,70.8,27.6,1634.0,2029,294.5,28.4,63.1,Maintain,0,1,0,0,0,21.16,Normal,60+,3,507,710,609,203
+44,Female,163.0,87.0,Moderately Active,Omnivore,1837,104.4,36.5,1731.0,1837,226.2,31.3,57.2,Weight Loss,0,0,0,0,0,32.74,Obese,30-44,3,459,643,551,184
+35,Female,177.0,53.0,Extremely Active,Pescatarian,1970,63.6,34.6,1772.0,1970,291.0,25.8,61.3,Weight Loss,0,0,0,0,0,16.92,Underweight,30-44,5,492,690,591,197
+40,Male,180.0,57.0,Lightly Active,Omnivore,1562,68.4,33.6,1716.0,1562,212.8,20.9,48.6,Weight Loss,0,0,0,0,0,17.59,Underweight,30-44,2,390,547,469,156
+30,Male,176.0,88.0,Moderately Active,Pescatarian,3344,140.8,40.6,1956.0,3344,461.2,33.2,104.0,Weight Gain,0,0,0,1,0,28.41,Overweight,30-44,3,836,1170,1003,334
+36,Female,176.0,78.0,Very Active,Pescatarian,3155,124.8,44.8,1600.0,3155,443.0,22.0,98.2,Weight Gain,0,0,0,0,0,25.18,Overweight,30-44,4,789,1104,946,316
+43,Male,177.0,98.0,Moderately Active,Vegetarian,2908,117.6,32.1,1663.0,2908,405.8,25.6,90.5,Maintain,0,0,0,0,0,31.28,Obese,30-44,3,727,1018,872,291
+31,Male,188.0,72.0,Moderately Active,Vegetarian,3005,115.2,36.9,2297.0,3005,425.7,32.1,93.5,Muscle Gain,0,1,0,0,0,20.37,Normal,30-44,3,751,1052,902,300
+55,Male,164.0,59.0,Moderately Active,Pescatarian,2385,94.4,36.9,2050.0,2385,334.9,20.3,74.2,Muscle Gain,0,0,1,0,0,21.94,Normal,45-59,3,596,835,716,238
+58,Female,173.0,79.0,Lightly Active,Omnivore,1953,94.8,41.9,2163.0,1953,256.6,35.0,60.8,Maintain,0,1,0,0,0,26.4,Overweight,45-59,2,488,684,586,195
+30,Male,169.0,62.0,Very Active,Vegan,2941,99.2,40.3,1571.0,2941,430.2,32.7,91.5,Muscle Gain,0,1,0,0,0,21.71,Normal,30-44,4,735,1029,882,294
+25,Male,164.0,68.0,Very Active,Omnivore,2734,81.6,38.1,1740.0,2734,410.4,34.3,85.1,Maintain,0,0,0,0,1,25.28,Overweight,18-29,4,684,957,820,273
+43,Female,162.0,75.0,Lightly Active,Vegan,1406,90.0,35.1,2225.0,1406,163.2,33.9,43.7,Weight Loss,0,0,0,0,0,28.58,Overweight,30-44,2,352,492,422,141
+36,Male,182.0,73.0,Moderately Active,Pescatarian,2123,87.6,36.2,1969.0,2123,294.6,27.5,66.0,Weight Loss,0,1,0,0,0,22.04,Normal,30-44,3,531,743,637,212
+41,Female,164.0,66.0,Moderately Active,Pescatarian,1544,79.2,35.0,1627.0,1544,198.8,30.8,48.0,Weight Loss,0,0,0,0,0,24.54,Normal,30-44,3,386,540,463,154
+48,Male,178.0,83.0,Sedentary,Vegan,1549,99.6,46.0,1503.0,1549,179.2,20.9,48.2,Weight Loss,0,0,0,0,0,26.2,Overweight,45-59,1,387,542,465,155
+26,Male,188.0,88.0,Lightly Active,Pescatarian,2954,140.8,47.7,1802.0,2954,390.9,26.5,91.9,Muscle Gain,0,0,0,0,0,24.9,Normal,18-29,2,738,1034,886,295
+42,Male,185.0,64.0,Sedentary,Pescatarian,1410,76.8,32.0,1604.0,1410,176.9,22.7,43.9,Weight Loss,0,0,0,0,0,18.7,Normal,30-44,1,352,493,423,141
+59,Male,178.0,91.0,Moderately Active,Pescatarian,3185,145.6,27.8,2008.0,3185,427.7,27.1,99.1,Weight Gain,0,1,0,0,0,28.72,Overweight,45-59,3,796,1115,956,318
+48,Female,151.0,60.0,Moderately Active,Vegan,1771,72.0,44.9,2103.0,1771,246.8,29.7,55.1,Maintain,1,0,0,0,0,26.31,Overweight,45-59,3,443,620,531,177
