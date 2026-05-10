@@ -59,8 +59,9 @@ recipes  = None
 rf_model = None
 scaler   = None
 
-RECIPE_CSV   = 'processed_recipes_clean.csv'
-FALLBACK_CSV = 'processed_recipes_final.csv'
+BASE_DIR     = os.path.dirname(os.path.abspath(__file__))
+RECIPE_CSV   = os.path.join(BASE_DIR, 'processed_recipes_clean.csv')
+FALLBACK_CSV = os.path.join(BASE_DIR, 'processed_recipes_final.csv')
 MODEL_PATH   = 'rf_model_v2.pkl'
 SCALER_PATH  = 'scaler_v2.pkl'
 
