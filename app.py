@@ -563,9 +563,10 @@ def health():
         'dataset'         : csv_used,
         'grok_api_ready'  : api_key_set,
     })
+    
+startup()
 
 if __name__ == '__main__':
-    startup()
     api_key_set = bool(os.environ.get("XAI_API_KEY", ""))
     print(f'\n🚀  NutriAI v2 running at http://localhost:5000')
     print(f'🤖  Grok AI chat: {"✅ ready" if api_key_set else "⚠️  set XAI_API_KEY to enable /chat"}')
